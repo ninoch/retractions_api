@@ -1,9 +1,16 @@
 import glob
+import sys
 import pandas as pd 
 from html.parser import HTMLParser
 
-
 folder_name = 'Physics_papers'
+if len(sys.argv) > 1:
+    folder_name = sys.argv[1]
+
+print ("")
+print ("\t >>> Parsing .html files in {}/ <<<".format(folder_name))
+print ("")
+
 ret_papers = pd.DataFrame(columns=['title', 'authors', 'journal', 'doi', 'pub_med', 'date', 'ret_dio', 'ret_pub_med', 'ret_date', 'reasons'])
 
 class MyHTMLParser(HTMLParser):
