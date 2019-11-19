@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://retractiondatabase.org/RetractionSearch.aspx#?jou%3dPhysics%2bof%2bFluids -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Retraction Watch Database
+</title><link rel="stylesheet" href="./Physics of Fluids_files/style.css"><link rel="stylesheet" href="./Physics of Fluids_files/jquery-ui.css"><link href="./Physics of Fluids_files/Main.css" type="text/css" rel="StyleSheet"><script src="./Physics of Fluids_files/jquery-1.11.3.min.js" type="text/javascript"></script><script src="./Physics of Fluids_files/jquery-ui.min.js" type="text/javascript"></script><script src="./Physics of Fluids_files/Main.js" type="text/javascript"></script><script src="./Physics of Fluids_files/Search.js" type="text/javascript"></script><script src="./Physics of Fluids_files/Login.js" type="text/javascript"></script><script type="text/javascript">
+         var autocompleteActivated = false;
+         $(function () {
+             //AttributeAutoComplete($('#txtSrchJournal'), '/RetractionEdit.aspx/FetchJournalNames');
+             //AttributeAutoComplete($('#txtSrchTitle'), '/RetractionEdit.aspx/FetchJournalNames');
+             $('#tblSearch [autoHint]').each(function () {
+                 AttributeAutoComplete($('#' + $(this).attr('id')), '/RetractionEdit.aspx/FetchJournalNames');
+             });
+             
+         });
+         function pageLoad() {
+             initPageRequestManager();
+         }
+         function initPageRequestManager() {
+             var prmInstance = Sys.WebForms.PageRequestManager.getInstance();
+             prmInstance.add_endRequest(function () {
+                 //re-bind jquery events         
+                 $('#tblSearch [autoHint]').each(function () {
+                     AttributeAutoComplete($('#' + $(this).attr('id')), '/RetractionEdit.aspx/FetchJournalNames');
+                 });
+             });
+         }
+         function getLoadListURL() {
+             return '/RetractionSearch.aspx/FetchSearchValues';
+         }
+    </script></head>
+
+
+    
+    
+    
+    
+    
+    
+     
+<body>
+    
+    <form method="post" action="http://retractiondatabase.org/RetractionSearch.aspx" id="frmRetractionSearch">
+<div class="aspNetHidden">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="PEazFwY36rr2skDsydkMiBr+1axQNaDXWCEi9h2q8Ri1Hnfy2n3Op+riqLgmgTLhx/fzwLyoFvu2gTjvHJsHb64Jyv1Wmy0MQLka2Rt2ZZeC+lOCsHtvoKZCs+D+8SNFfxavLY2VwDXAVXMVrPyuKCmrR7Tgvb/MFOWb9y/L/sJv4tuStLWqaObKoqndp2q3isRPlTgcTmLr6sxUEIXX/3O7FoXP8MbESTK6hTaZEIy11d92PEv1vejBKaejpjv1Y8ok9mwAEDIiLLaDiQgvKs+mwmE0LHunx/fANMcNH/wdDHnkB19spTwITtffpVU/1m8b6+kV4h3LGUy1Hm6eua80lIkSKBOBE7+Zw/pDjUsTpllYPLUnQ9V22VksAMsf3XwoUJ9xzeqLUDe4BL3ZjI1Vb4KBGyxwWp8SyLuD95YV7yO1prpxOVoXh/BQfSC+6qAGgV0yVKv4a5xnrob+Nx4jBmN9KUZjgEiQ3X+DtWADDlLtqS5rm2+YgkzBrSV8bDfVet+P1SIa9A4h8mAory5nXPj7xxAUznv0RRrAFmuIv13qpET3ZTwILwXsZAXHm+t1JaKUsFb2E0XWb0mUvvfhxT3bMNiY54rNIBL8l6CEG8SpwrPgFmpqmhO2TRkzCgU1/cvhMdxkLBSIapC+QX3O0wmSlrY/Ojb5hCRjVM541/hO084r7KdgMY7DkIZ2jNjrEFwnq03gD61Qnc7bWJehl+cKQBcHyYWluerkgXg7tstLHIA/UVbnWtzIyxOB7HZLVt/pVZ2p+OEyQKn2h5qdUWuQlL/U9uyCYMf1SecG6pvtbv0BMeeTle5WZqz4zB8+khpF52EqdIIjITwEAHUk7tKSJ/JYnMSs8UEyFDLZTLUtMTGyQw3n5PTNqF0d92dDV1qFjU/RHLjDO2PQljbRsvmfREOVaWeEYRNH9H7nvBaegQsMqW1AYumO8nahRLqyXJNP6n9UoXmzGgGHhQv9HKQul7GEqZ7MzpLi3RdtBP5TCRMLmnpPIRqiMrVQ5fyVCpSkybxE1fqFmpDxW90rE3tT2ezLaEu5vxtzSnzqYxRYRZG7YigsXnZHTjUqrB+n60nRxUYaiJC1i1GTIwitSaFacHnjUaJizwc/B1SmnAokT9XPmniFCm/rNKs64t5volupSYStZbBdKMWbsuPRp4wmccXmgAaWXsXPJ12VFvDYdFMIyrEwd5+hXg2To2F4vibq2P2cuynLxKXodE6W5CqJT6RKTN60V5sb/8vVyW7YmuJ3+es10TCjbVM3EZxi84uNmWI0Y9840ZM9jWzkalrWEMc5Mzh1B7EPY77Gfrrzooc5UzpBcEN9lhz3HhFUDMt1ouBTjpW+GFSMnSXFwVukEo2gnNM2wJeKfNAdVXQ7+ye2q6G/UzDZ00xPWB7VwDFu07Ux5bw6w5TO+OlM2sgbxFU5kyzwMaqpSFJgivp7VGs4ypz41B45fpLbgYLdOuhYAzNBmp1UCs3bj0jRK2BLPnSj369LpC+Zg0NDExNU7UsdEWpnEFfG1VMan7dSTymXi8yOk/UNuLSWbfhr2CQ0eFp9acdFIhF3QPcW0hXEhiD1BSd58DozTipbolgn3mdhiTMeZW0yNnw/q+S9jz9IdiQWU8VnOqs4SPfdyTA8eCsUjQ1WW1IU1lcA0axNUy6i0XTLpzh0zsfP/eGD0bVkXHAZoR1ww+XliAjNmdbSJngsVvagQUQbly+G5dTV0zzzGwbaSECThc+ZJVZTuJvndosb+DV2CxFlsT7uQCYxLoECb39W2o1/pfEIGvK6FRK8OHxSFmFTK3EJK75seCwdjmd+k8hBX9R7VPlVOKT+A6gFA7QCdRzVfv2g4UX0eK7ARmOYfbCC6ZRb7YZTEGs+4E7qiPiGgfp42oXDXu8KOEfEXDcm0tw1eQbEo+xxqA1aLPfYg1VXVcc9frn37KWT5RhARFjSBeV5BxALrBj+">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmRetractionSearch'];
+if (!theForm) {
+    theForm = document.frmRetractionSearch;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./Physics of Fluids_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./Physics of Fluids_files/WebResource(1).axd" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F1918523">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="laPysSa42T/oxsve9xC1a4KGc0nX9S/0dLMT5W+ZfUtmE2CuFN2lGc1ekQwLW0KgKgO2aN8lSH/uWjthL9gLnEKgzZit9f3MpypSvhYYKsPfCZdU/IJqMI/d/xUTYE0lhTKhgmdh9eQZkwn8yTgHwwfhQ4yoIiTcnNkIfO9r7T/v0PiJhVjzZoalbTS5xV+jCsu0rryE3evSzxJZgUI+Q9XkzgJLhdaI880thKakRZCmW/CdpYosd/ZUGlu8DVyeYCRWUzjlf3Za/SnCrEIm/h0Cie0uGAEoEyg6NQnzUKIvRnZlNSK6HSBGHt6zgs3i6Qwnsykn9sgRBAqKo3Ea50z6ylYEPcudk/BcusgBtVOozWrqGXe9ieJ29ehZgy/+CVumzY6UfrNMoJByXIKJVgPXoFESmbs8tYUxZpNM5mx9H/IJ1d/mDn0yySgCtRt4lh34uG0YTBVyknuzIpmFcyodpHpqRJ/mvRQfA4Eav6d3mE2WVra0H5VSCxhsdBTkOsZIGfyYv/EA0n8n8NahL2UoGXtKMNHT0xARnPCtB7RuzGWA1VCAqCFZ94Dc7UnEnoJRjnwRoApBPQlF+tpRfCq4G1DjxkpqIrJzSjV1zFw1W8JO1iREB9eLPrlAnilDfYQAysEYt4I2zRfX+FTQm1G79BwnD1fBpcFujPPkStmPJ+wZ982UZDNhoOvd//TOZ9dNJlfRulLuCfIcQtMp73+AeP0QF2Epm5p5W+TGGc16y6bawgnOEcv+67K+b/U50mwgeyypQBIf9vC+N5SOArG+yyFsRLsXDoKWqREw7K/YprPtKcsYapWToReG0hK0KWLFVhLDLqKOgfaR+RTX8fje+xmcmV6oMqtpWtY8HLznYm8N8fnR0Scpj6Bba0gPEWKq3ne0/T5Fz4ug+OdLPiG+h0WwLQIo0QBZnvo1k2eLXTZ1NtMyFhP5fEic+MRofL6EMEHV94BGBfIfAZvb7NqrfvEdzoyE3AWP7bg+vEr3gmctbOGKszE2vgwhQC3K2IY2DDS1I0WKsA+TJHQJIY/7vz0Oy2n88d0cbhNxoROtOMk5w0igssEh328SGWQ6pZO650gBpZirCd6H42NDXbt8lTn+nrkg9xFOSJjp0wao0hCzOe12xJL0F+dEtlUKehvz/C4+RYOi2V2Kf+hJKCqGnBbf4RuQ3lJGzzpKd0UOQbCDQD6aFol7+VSMXL0N/KDD4R3z2/L+pNuzqw9yB8NIKJI/8Ol+C/TLP8ZUJDZtG2bxlMRt0F8qRs9RGF7d9nsPEvB3K3LEuZaXZPKArOJsNboldDsIXeBOuATcKI1n/BK3FLfSi443G4Ej4papVlSXoqFkOpY2O9rFTRfYBdH30/a3cSEovjJQAhbmua5pkj8oqBg+1CM+113eqCm0rMlYj2aFbTytI5+bCztx5BeKxC0O5G/CU+qNftDiv0Sd7eyEkllg697BVNN1AN6CYa3F4wxUJzy02pXUM7r/WqQYvdw=">
+</div>
+    <div id="divTitle" class="" style="width: 78%;">
+        <div style="width:4%;display:inline-block">
+            <h2 class="smallFont"><a href="http://www.retractionwatch.com/" id="lnkHelp" style="float:right;display:none;" target="_blank">Help</a></h2>
+        </div>
+          <div id="wrap" style="float:right">
+            <div id="regbar">
+                <div id="navthing">
+                    <h2 class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" id="loginform">Login</a>
+                        <a id="logoutform" style="display:none" href="javascript:__doPostBack(&#39;logoutform&#39;,&#39;&#39;)">Logout</a>
+                        <a id="hrefAdmin" href="javascript:goToAdmin();" style="margin-left:20px;display:none;">Admin</a>
+                          <a id="hrefDownload" style="margin-left:20px;display:none" onclick="return(downloadWarning());" href="javascript:__doPostBack(&#39;hrefDownload&#39;,&#39;&#39;)">Download</a>
+                    </h2>    
+                    <div class="login">
+                        <div class="arrow-up"></div>
+                        <div class="formholder"> 
+                            <div id="loginDiv" class="randompad">
+                                <fieldset>
+                                    <label name="email" for="txtEmail" style="float:left;">Email</label>
+                                    
+                                    <input name="txtEmail" type="email" id="txtEmail" required="required" oninvalid="this.setCustomValidity(&#39;Please enter an email address&#39;)" oninput="this.setCustomValidity(&#39;&#39;)">
+                                    
+                                    <label name="password" style="float:left;" for="txtPSWD">Password</label>
+                                    <input name="txtPSWD" type="password" id="txtPSWD" required="required" oninvalid="this.setCustomValidity(&#39;Please enter a password&#39;)" oninput="this.setCustomValidity(&#39;&#39;)">
+                                    <input name="btnLogin" type="submit" id="btnLogin" value="Login">
+ 
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+        </div>
+        <table width="100%">
+            <tbody><tr>
+                <td class="logo smallFont" style="color:darkblue;">
+                    <p style="float:right"><span>Version: </span><span id="lblVersionNo" style="font-size: 12px; font-weight: bold;">1.0.5.5</span></p> 
+                 </td>
+            </tr>
+        </tbody></table>
+    </div>
+   <div id="divContent" style="width: 100%; margin-top: -40px;" class="searchBox">
+    <div>
+    <table id="tblSearch" style="width:80%;margin:0 auto;" class="smallFont">
+        <tbody><tr>
+            <th colspan="2">
+                
+                The Retraction Watch Database<br>
+                <input type="button" name="btnRetractionAdd" value="" onclick="_spFormOnSubmitCalled = false; _spSuppressFormOnSubmitWrapper=true;__doPostBack(&#39;btnRetractionAdd&#39;,&#39;&#39;)" id="btnRetractionAdd" title="Add Notice" style="border-width:0px;height:36px;width:70px;margin-top:-12px;margin-right:4px;margin-bottom:4px; display:none;float:right;background-image:url(&#39;Images/BtnAdd.png&#39;);">
+                
+                 <span id="lblMessage">Please see this <a style="color:darkblue" href="https://retractionwatch.com/retraction-watch-database-user-guide/">user guide</a> before you get started</span>
+            </th>
+        </tr>
+        
+        <tr>
+            <td style="width:68%" class="smallFont">
+                <table>
+                <tbody><tr class="searchLeft HeadText HeadMini">
+                     <td class="smallFont">
+                        <span id="lblAuthor" title="Type or select from list and press Search button" sqlparm="Author">Author(s):</span>
+                    </td>
+                    <td style="white-space:nowrap" class="smallFont">
+                        <input name="txtSrchAuthor" type="text" id="txtSrchAuthor" placeholder="Type to search" autohint="" attrcode="SAU" searchtype="Expert" bool="Y" sqlparm="Author" onfocus="this.CursorPosition = this.value.length;" onblur="$(&#39;#lstAuthor&#39;).hide();nextSearch=&#39;Expert&#39;;" style="width:90%;" class="ui-autocomplete-input" autocomplete="off" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgAuthor" src="./Physics of Fluids_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstAuthor&#39;));" alt="Drop">  
+                    </td>
+                     <td style="width:10%" class="smallFont">
+                        <span id="lblCoutry" title="Type or select from list and press Seach button" sqlparm="Country">Country(s):</span>
+                    </td>
+                    <td style="white-space:nowrap" class="smallFont">
+                        <input name="txtSrchCountry" type="text" id="txtSrchCountry" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" onblur="$(&#39;#lstCountry&#39;).hide();nextSearch=&#39;Expert&#39;;" style="width:88%;" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgCountry" src="./Physics of Fluids_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstCountry&#39;));" alt="Drop">  
+                    </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                     <td class="smallFont">
+                        <span id="lblTitle" title="Enter search Title and press Search button" sqlparm="Title">Title:</span>
+                    </td>
+                    <td colspan="3" style="width:100%" class="smallFont">
+                             <input name="txtSrchTitle" type="text" id="txtSrchTitle" attrcode="STL" autohint="" keepperiod="Y" placeholder="Type to search" onfocus="this.CursorPosition = this.value.length;" searchtype="Expert" bool="Y" class="ui-autocomplete-input" autocomplete="off" title="Use AND / OR / AND NOT operators for boolean search">
+                    </td>
+                </tr> 
+                <tr class="searchLeft HeadText HeadMini">
+                    <td class="smallFont">
+                    <span id="lblSrchReason" title="Type or select from list and press Search button" sqlparm="Reason">Reason(s) for Retraction:</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                    <input name="txtSrchReason" type="text" id="txtSrchReason" attrcode="SRE" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" sqlparm="Reason" onblur="$(&#39;#lstReason&#39;).hide();nextSearch=&#39;Expert&#39;;" title="Use AND / OR / AND NOT operators for boolean search">
+                    <img id="img2" src="./Physics of Fluids_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstReason&#39;));" alt="Drop">     
+                    </td>
+                </tr>   
+                <tr class="searchLeft HeadText HeadMini">
+                 <td class="smallFont">
+                    <span id="lblSubject" title="Type or select from list and press Search button" sqlparm="Subject">Subject(s):</span>
+                    </td>
+                    <td style="white-space:nowrap" class="smallFont">
+                        <input name="txtSrchSubject" type="text" id="txtSrchSubject" attrcode="SSU" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" onblur="$(&#39;#lstSubject&#39;).hide();nextSearch=&#39;Expert&#39;;" style="width:90%;" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgSubject" src="./Physics of Fluids_files/downArrow.png" class="btnImage" title="Search All Subjects" onclick="dropDownClick($(this).prev(),$(&#39;#lstSubject&#39;));" alt="Drop"> 
+                        <img id="imgSubjectGroup" style="margin-left:-5px" title="Search by Subject Groups" src="./Physics of Fluids_files/group.png" class="btnImage" onclick="dropDownClick($(this).closest(&#39;td&#39;).find(&#39;input&#39;),$(&#39;#lstSubjectGroup&#39;));" alt="Drop">        
+                        
+                    </td>
+                    <td class="smallFont">
+                    <span id="lblType" title="Type or select from list and press Search button" sqlparm="ArticleType">Article<br>Type(s):</span>
+                    </td>
+                    <td style="white-space:nowrap" class="smallFont">
+                        <input name="txtSrchType" type="text" id="txtSrchType" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" onblur="$(&#39;#lstType&#39;).hide();nextSearch=&#39;Expert&#39;;" style="width:88%;" title="Use AND / OR / AND NOT operators for boolean search">
+                    <img id="imgType" src="./Physics of Fluids_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).closest(&#39;td&#39;).find(&#39;input&#39;),$(&#39;#lstType&#39;));" alt="Drop">     
+                    </td>
+                </tr>   
+                <tr class="searchLeft HeadText HeadMini">
+                    <td class="smallFont">
+                        <span id="lblSrchJournal" title="Type or select from list and press Search button" sqlparm="Journal">Journal:</span>
+                     </td>
+                     <td colspan="3" class="smallFont">
+                        
+                         <input name="txtSrchJournal" type="text" value="Physics of Fluids" id="txtSrchJournal" autohint="" attrcode="SJO" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" sqlparm="Journal" onblur="$(&#39;#lstJournal&#39;).hide();nextSearch=&#39;Expert&#39;;" class="ui-autocomplete-input" autocomplete="off" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgDroplstJournal" src="./Physics of Fluids_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstJournal&#39;));" alt="Drop">     
+                     </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                    <td class="smallFont">
+                        <span id="lblPublisher" sqlparm="Publisher">Publisher:</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                       
+                        <input name="txtSrchPublisher" type="text" id="txtSrchPublisher" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" sqlparm="Publisher" onblur="$(&#39;#lstPublisher&#39;).hide();nextSearch=&#39;Expert&#39;;" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgPublisher" src="./Physics of Fluids_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstPublisher&#39;));" alt="Drop">     
+                    </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                    <td class="smallFont">
+                        <span id="lblAffiliation" sqlparm="Institution">Affiliation(s):</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                       <input name="txtSrchInstitution" type="text" id="txtSrchInstitution" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" title="Use AND / OR / AND NOT operators for boolean search">   
+                    </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                     <td class="smallFont">
+                        <span id="lblNotes" title="Enter search Notes and press Search button">Notes:</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                        <input name="txtSrchNotes" type="text" id="txtSrchNotes" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" title="Use AND / OR / AND NOT operators for boolean search">
+                    </td>
+                    <td colspan="2" class="hideWrite smallFont">
+                        <img id="imgAdminNotes" border="0" title="Admin Notes" src="./Physics of Fluids_files/NotesAdmin.png" alt="Notes" class="NotesAdmin logo" height="20px" style="cursor: default;">
+                        <input name="txtSrchAdminNotes" type="text" id="txtSrchAdminNotes" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" style="width:86%;" title="Use AND / OR / AND NOT operators for boolean search">
+                    </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                     <td class="smallFont">
+                        <span id="lblSrchURL" title="Enter search URL and press Search button" sqlparm="URL">URL:</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                        <input name="txtSrchURL" type="text" id="txtSrchURL" searchtype="Expert" onfocus="this.CursorPosition = this.value.length;">
+                    </td>
+                </tr>
+                </tbody></table>
+            </td>
+            <td style="vertical-align:top" class="smallFont">
+                <table cellspacing="0">
+                    <tbody><tr>
+                        <td class="searchRight HeadText HeadMini smallFont" colspan="4" style="text-align:center">
+                            <span style="margin-top:-4px">Original Paper</span>
+                        </td>
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini">
+                        <td class="hasTopBorder hasLeftBorder smallFont">
+                            <span id="lblOriginalDateFrom" sqlparm="OriginalPaperFromDate">From Date:</span>
+                        </td>
+                        <td class="hasTopBorder rDates smallFont">
+                            <input name="txtOriginalDateFrom" type="text" maxlength="10" id="txtOriginalDateFrom" class="dateField" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;return(validateDate(this));">
+                            
+                        </td>
+                        <td class="hasTopBorder smallFont">
+                            <span id="lblOriginalDateTo" sqlparm="OriginalPaperToDate">To:</span>
+                        </td>
+                        <td class="hasTopBorder hasRightBorder rDates smallFont">
+                            <input name="txtOriginalDateTo" type="text" maxlength="10" id="txtOriginalDateTo" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;if (validateDate(this)) dateCompare($(&#39;#txtOriginalDateFrom&#39;)[0], this);">
+                            
+                        </td>
+                       
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder smallFont">
+                            <span id="lblOriginalPubMedID" sqlparm="OriginalPaperPubMedID">PubMedID:</span>
+                        </td>
+                        <td class="rPubMed smallFont">
+                            <input name="txtOriginalPubMedID" type="text" maxlength="8" id="txtOriginalPubMedID" class="clNumber" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;">
+                        </td>
+                        <td class="smallFont">
+
+                        </td>
+                        <td colspan="1" class="hasRightBorder smallFont">
+                            <span class="timeStamp" style="float:left">mm/dd/yyyy</span>
+                        </td>
+                    </tr>
+                     <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder hasBottomBorder smallFont">
+                            <span id="lblOriginalDOI" sqlparm="OriginalPaperDOI">DOI:</span>
+                        </td>
+                        <td class="hasRightBorder hasBottomBorder smallFont" colspan="3">
+                            <input name="txtOriginalDOI" type="text" maxlength="100" id="txtOriginalDOI" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="searchRight HeadText HeadMini smallFont" style="text-align:center">
+                            <span id="lblRetracHead">Retraction or Other Notices</span>
+                        </td>
+                    </tr>
+                     <tr class="searchRight HeadText HeadMini">
+                        <td class="hasTopBorder hasLeftBorder smallFont">
+                            <span id="lblFromDate" sqlparm="RetractionFromDate">From Date:</span>
+                        </td>
+                        <td class="hasTopBorder rDates smallFont">
+                            <input name="txtFromDate" type="text" maxlength="10" id="txtFromDate" class="dateField" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;validateDate(this);">
+                            
+                        </td>
+                        <td class="hasTopBorder smallFont">
+                            <span id="lblToDate" sqlparm="RetractionToDate">To:</span>
+                        </td>
+                        <td class="hasTopBorder hasRightBorder rDates smallFont">
+                            <input name="txtToDate" type="text" maxlength="10" id="txtToDate" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;if (validateDate(this)) dateCompare($(&#39;#txtFromDate&#39;)[0], this);">
+                        </td>
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder smallFont">
+                            <span id="lblPubMedID" sqlparm="RetractionPubMedID">PubMedID:</span>
+                        </td>
+                        <td class="rPubMed smallFont"> 
+                            <input name="txtPubMedID" type="text" maxlength="8" id="txtPubMedID" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;" class="clNumber">
+                        </td>
+                        <td class="smallFont">
+                        </td>
+                         <td class="hasRightBorder smallFont" style="">
+                             <span class="timeStamp" style="float:left">mm/dd/yyyy</span>
+                             
+                         </td>
+                    </tr>
+                     <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder smallFont">
+                            <span id="lblDOI" sqlparm="RetractionDOI">DOI:</span>
+                        </td>
+                        <td class="hasRightBorder smallFont" colspan="3">
+                            <input name="txtDOI" type="text" maxlength="100" id="txtDOI" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;">
+                        </td>
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder hasBottomBorder smallFont">
+                            <span id="lblNotice" sqlparm="RetractionNature">Nature of Notice:</span>
+                        </td>
+                        <td class="hasBottomBorder smallFont" colspan="1">
+                            <select name="drpNature" id="drpNature" searchtype="Expert" style="width:95%;">
+	<option selected="selected" value=""></option>
+	<option value="Retraction">Retraction</option>
+	<option value="Expression of concern">Expression of Concern</option>
+	<option value="Correction">Correction</option>
+
+</select>
+                        </td>
+                        <td class="hasBottomBorder smallFont">
+                            <span id="lblPaywalled" sqlparm="Paywalled">Paywalled:</span>
+                        </td>
+                        <td class="hasRightBorder hasBottomBorder smallFont">
+                            <select name="drpSrchPaywalled" id="drpSrchPaywalled" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;" style="width:89%;">
+	<option selected="selected" value=""></option>
+	<option value="Y">Yes</option>
+	<option value="N">No</option>
+	<option value="U">Unknown</option>
+
+</select>
+                        </td>
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini hideAdmin">
+                        <td class="smallFont">
+                            <span id="lblUser">Created By User:</span>
+                        </td>
+                        <td class="smallFont">
+                            <select name="drpUser" id="drpUser" attrcode="SUS" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;" style="width:95%;">
+	<option selected="selected" value=""></option>
+	<option value="2">aabritis@gmail.com</option>
+	<option value="502">allysonalisha@gmail.com</option>
+	<option value="503">ashley.morrison@austin.utexas.edu</option>
+	<option value="504">bavrumov@hotmail.com</option>
+	<option value="505">dilinikumaratunga@gmail.com</option>
+	<option value="506">fredbeldin@gmail.com</option>
+	<option value="507">jim.eakins@gmail.com</option>
+	<option value="508">jon.jeffryes@gmail.com</option>
+	<option value="509">marissa.shieh@gmail.com</option>
+	<option value="510">mehlibrarian@gmail.com</option>
+	<option value="511">michael.e.koziol@gmail.com</option>
+	<option value="512">mjk4219@gmail.com</option>
+	<option value="513">NA</option>
+	<option value="514">nicole.wetsman@gmail.com</option>
+	<option value="515">pmccall@rollins.edu</option>
+	<option value="516">renata.massion@gmail.com</option>
+	<option value="517">rheaphine@gmail.com</option>
+	<option value="518">rkumaratunga@gmail.com</option>
+	<option value="519">rrinaldi@mail.usf.edu</option>
+	<option value="520">rsinn@jhu.edu</option>
+	<option value="521">s.heidij@gmail.com</option>
+	<option value="522">sparksjo92@gmail.com</option>
+
+</select>
+                            
+                        </td>
+                        <td class="rDates smallFont">
+                            <input name="txtCreateFromDate" type="text" maxlength="10" id="txtCreateFromDate" class="dateField" placeholder="mm/dd/yyyy" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;validateDate(this);">
+                        </td>
+                        <td class="rDates smallFont">
+                            <input name="txtCreateToDate" type="text" maxlength="10" id="txtCreateToDate" class="dateField" placeholder="mm/dd/yyyy" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;validateDate(this);">
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+            </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                   <td class="smallFont">
+                    <input type="button" name="btnSearch" value="" onclick="if (checkSearchRequest(this)){_spFormOnSubmitCalled = false; _spSuppressFormOnSubmitWrapper=true;}else return false;__doPostBack(&#39;btnSearch&#39;,&#39;&#39;)" id="btnSearch" searchtype="Expert" style="border-width:0px;border-style:None;height:36px;width:70px;background-image:url(&#39;Images/BtnSearch.png&#39;);float:right;" title="Select search criteria and click to start search ">
+                       <a id="hlinkClear" title="Clear Search" onclick="clearSearch(&#39;Expert&#39;); $(&#39;#hidClearSearch&#39;).val(&#39;Y&#39;);return false;" style="color:darkblue;float:left;
+                                        font-size:14px;text-decoration: underline;">Clear Search</a>
+                        <div class="spinner" style="float:right;margin-right:200px;width:4%;">
+                           <img id="imgSpinner" src="./Physics of Fluids_files/spinner.gif" style="display:none;float:right;" alt="Please wait..."> 
+                        </div>
+                    </td>
+                     <td align="right" class="smallFont">
+                         
+
+                         
+                     </td>
+                </tr>
+                     <tr class="searchLeft HeadText HeadMini smallFont">
+                     <td class="error smallFont">
+                        <span id="lblAppName" clearctl="Y" style="color:Yellow;background-color:Transparent;font-family:Verdana;font-size:13px;font-weight:bold;color: MidnightBlue;"></span>
+                         <span id="lblError" clearctl="Y" style="display:inline-block;color:Red;background-color:Yellow;border-color:Blue;border-width:1px;border-style:Solid;text-align:center;display:none;"></span> 
+                       </td>  
+                       <td colspan="2" style="text-align:center;" class="smallFont">
+
+                           <span id="lblDateError" clearctl="Y" style="display:inline-block;color:Red;background-color:Yellow;border-color:Blue;border-width:1px;border-style:Solid;text-align:center;display:none;"></span>  
+                     </td>
+                 </tr>
+            </tbody></table>
+    </div>
+    <input type="hidden" name="hidClearSearch" id="hidClearSearch">
+    <input type="hidden" name="hidSqlParmNames" id="hidSqlParmNames" value="Journal;Journal;Journal;Journal;">
+    <input type="hidden" name="hidEmptySqlParmNames" id="hidEmptySqlParmNames">
+   <div id="divGridRetraction" style="margin:0 auto;display:table">
+        <span id="ScrollGrid" style="OVERFLOW: auto; background-color: whitesmoke;">
+                    <div>
+	<table cellspacing="0" cellpadding="2" rules="all" clearctl="Y" id="grdRetraction" style="background-color:WhiteSmoke;border-color:Gray;border-width:1px;border-style:Solid;font-family:Times New Roman;height:8px;border-collapse:collapse;overflow: auto" class="smallFont">
+		<tbody><tr>
+			<th class="hidden smallFont" scope="col">RID</th><th class="header headerSortUp smallFont" scope="col" style="border-color:White;border-width:1px;border-style:solid;white-space:nowrap;">Retraction or Other Notices<br>Title/Subject(s)/Journal --- Publisher/Affiliation(s)/Retraction Watch Post URL(s)<br><span class="totalItems">2 Item(s) Found</span></th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Reason(s)</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Author(s)</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Original Paper<br>Date/PubMedID/DOI</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Retraction or Other Notices<br>Date/PubMedID/DOI</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Article Type(s)<br>Nature of Notice</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;" class="smallFont">Countries<br>Paywalled?<br>Notes</th>
+		</tr><tr class="mainrow" style="background-color:LightYellow;border-color:Black;border-width:1px;border-style:Solid;">
+			<td class="hidden smallFont" style="color:Black;">18472</td><td id="grdRetraction_Title_0" title="18472" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$18472&#39;)" style="cursor:default;"><span class="rTitleNotIE">A unified probability density function formulation to model turbulence modification in two-phase flow</span><br><span class="rSubject">(PHY) Physics; (PHY) Statistics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physics of Fluids ---</span><span class="rPublisher">AIP Publishing</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Institute of Fluid Dynamics, ETH Zurich, Sonneggstrasse 3, Zürich CH-8092, Switzerland</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Error in Data</div><div class="rReason">+Error in Results and/or Conclusions</div><div class="rReason" style="border-bottom-style: none;">+Results Not Reproducible</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Gaurav Anand</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Patrick Jenny</a></td><td style="border-color:Silver;" class="smallFont">10/07/2009<br>00000000<br><span class="rNature">10.1063/1.3231831</span></td><td style="border-color:Silver;" class="smallFont">06/22/2012<br>00000000<br><span class="rNature">10.1063/1.4729616</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>Switzerland<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physics of Fluids_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physics of Fluids_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="https://aip.scitation.org/doi/full/10.1063/1.4729616
+
+During a follow-up project within the same group it has come to our attention that the results presented in our paper are not consistent with the model described in the same article. We therefore would like to withdraw the above-mentioned article." class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow" style="background-color:White;">
+			<td class="hidden smallFont" style="color:Black;">5101</td><td id="grdRetraction_Title_1" title="5101" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$5101&#39;)" style="cursor:default;"><span class="rTitleNotIE">Direct numerical simulation of the Ekman layer: A step in Reynolds number, and cautious support for a log law with a shifted origin</span><br><span class="rSubject">(B/T) Transportation; (PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physics of Fluids ---</span><span class="rPublisher">American Institute of Physics (AIP Publishing)</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Boeing Commercial Airplanes, P.O. Box 3707, Seattle, Washington 98124, USA</span><span class="rInstitution">School of Engineering Sciences, University of Southampton, Southampton SO17 1BJ, United Kingdom</span><span class="rInstitution">STFC Daresbury Laboratory, Daresbury, Warrington WA4 4AD, United Kingdom</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Error in Data</div><div class="rReason" style="border-bottom-style: none;">+Results Not Reproducible</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Phillipe R Spalart</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Gary N Coleman</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Roderick Johnstone</a></td><td style="border-color:Silver;" class="smallFont">10/01/2008<br><br><span class="rNature">10.1063/1.3005858</span></td><td style="border-color:Silver;" class="smallFont">10/28/2009<br><br><span class="rNature">10.1063/1.3247176</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>United Kingdom<br>United States<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physics of Fluids_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physics of Fluids_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr>
+	</tbody></table>
+</div>
+            </span>
+        </div>
+        <select id="lstCountry" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchCountry&#39;));" class="lstBox" attrcode="SCO"></select>
+        
+        <select id="lstAuthor" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchAuthor&#39;));" class="lstBox" attrcode="AUT"></select>
+        
+        <select id="lstJournal" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchJournal&#39;));" class="lstBox" attrcode="SJO"></select>
+        
+        <select id="lstPublisher" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchPublisher&#39;));" class="lstBox" attrcode="SPU"></select>
+        
+        <select id="lstSubject" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchSubject&#39;));" class="lstBox" attrcode="SSU"></select>
+        
+        <select id="lstSubjectGroup" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchSubject&#39;));" class="lstBox" attrcode="SGR"></select>
+        
+        <select id="lstReason" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchReason&#39;));" class="lstBox" attrcode="SRE"></select>
+        
+        
+        <select id="lstType" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchType&#39;));" class="lstBox" attrcode="STY"></select>
+    </div>
+    
+<script>window.location.hash = '?jou%3dPhysics%2bof%2bFluids';</script>
+<script type="text/javascript">
+//<![CDATA[
+WebForm_AutoFocus('txtSrchTitle');//]]>
+</script>
+</form>
+    
+
+<script src="./Physics of Fluids_files/index.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //alert('loaded');
+        //    if (!$.browser.safari)
+        //        initEdit();
+        imageLoaded();
+        initLogin();
+        if (($('#btnSave').is(":visible") && isIE) || $('#btnSave').css('display') !== 'none')
+            $('tr').removeClass('hidden');
+        try {
+            doScroll();
+        }
+        catch (err) {
+        }
+        //imageLoaded();
+        
+    });
+    //$(window).load(function () {
+    //    //alert("window load occurred!");
+    //    imageLoaded();
+    //    //alert($('#btnSearch').css('background-image'));
+    //    //toggleSpinner();
+    //    //$('#divContent')
+    //    //    .show();
+    //});
+</script>
+
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none; font-size: 0.9em;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-2" tabindex="0" style="display: none; font-size: 0.9em;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-3" tabindex="0" style="display: none; font-size: 0.9em;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span></body></html>

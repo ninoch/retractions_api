@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://retractiondatabase.org/RetractionSearch.aspx#?jou%3dPhysical%2bReview%2bB -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Retraction Watch Database
+</title><link rel="stylesheet" href="./Physical Review B_files/style.css"><link rel="stylesheet" href="./Physical Review B_files/jquery-ui.css"><link href="./Physical Review B_files/Main.css" type="text/css" rel="StyleSheet"><script src="./Physical Review B_files/jquery-1.11.3.min.js" type="text/javascript"></script><script src="./Physical Review B_files/jquery-ui.min.js" type="text/javascript"></script><script src="./Physical Review B_files/Main.js" type="text/javascript"></script><script src="./Physical Review B_files/Search.js" type="text/javascript"></script><script src="./Physical Review B_files/Login.js" type="text/javascript"></script><script type="text/javascript">
+         var autocompleteActivated = false;
+         $(function () {
+             //AttributeAutoComplete($('#txtSrchJournal'), '/RetractionEdit.aspx/FetchJournalNames');
+             //AttributeAutoComplete($('#txtSrchTitle'), '/RetractionEdit.aspx/FetchJournalNames');
+             $('#tblSearch [autoHint]').each(function () {
+                 AttributeAutoComplete($('#' + $(this).attr('id')), '/RetractionEdit.aspx/FetchJournalNames');
+             });
+             
+         });
+         function pageLoad() {
+             initPageRequestManager();
+         }
+         function initPageRequestManager() {
+             var prmInstance = Sys.WebForms.PageRequestManager.getInstance();
+             prmInstance.add_endRequest(function () {
+                 //re-bind jquery events         
+                 $('#tblSearch [autoHint]').each(function () {
+                     AttributeAutoComplete($('#' + $(this).attr('id')), '/RetractionEdit.aspx/FetchJournalNames');
+                 });
+             });
+         }
+         function getLoadListURL() {
+             return '/RetractionSearch.aspx/FetchSearchValues';
+         }
+    </script></head>
+
+
+    
+    
+    
+    
+    
+    
+     
+<body>
+    
+    <form method="post" action="http://retractiondatabase.org/RetractionSearch.aspx" id="frmRetractionSearch">
+<div class="aspNetHidden">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="QmcGNFyK+vGNQKM9cnx6AzYwyTbCR0olL+pbq/FJ+ZJED/7zg6WfAhhMNw+DJTcs+8t3ngRgFvjG4AhRGXA0vxE7/Dja5PoBUE0latvLXYNy6zuJTiXDvwp/Nm7q4wwSViwd57BC11ZP3Zg2+biacCDoa43BAy/RDl0CnuhRL624AyljgbqBXCKdaLYy8HaH9WnufxRJmH6SGf5j3V7+S/btZY2iexxz4ewJQT2bM8rlOm7/2K9h9YbCL2Yp1jUJCPU9Mf5PYILCIrJw5t1N0Q0VANCsONU6GJW1r8HlGaXu2+53OXpzdjjtvPegXxLRjn9n6Pvq3j686hmKYA4x071hMnkzOSi4grBuIgicAzh3RgXP4xL+jQi1GBcUmZEgpxdvPzUsasLwil8Gq22Bawd+EF3d8bbu2S7yEvh/6FxXztICF78tzhAgvndZ802uwXbXnP0y94+nIpbHXh6R9ToJmVIVARQhuKWQpsAlDEk5MIydTDa/6ggAxFz2AAY0s1wQO4cdfQQY3viOjuRoDlxz3T2gQg/hyN0usaE55ue/XOBPS9S/Cm+Iqa16LF5IUvinIgXd0QicRftd2ZVG00GmlCKNF3BCMJXFTFcUQGg0qEtOiZUnKgf5UPR8mf8BE8+ZiKR6bNbcbI6Omi/CX5lMPdPpqo3x2YswFjnh2bZ95Fra2zXtQlZ8phBAvmqyuW1lhIvKiPNXn03/97zxe0PjlKh3kQdpRrn07576UW/IBrFNx+3h7qGkMVPWbbOPoDADvQGOjQhPJsfrr1sz6Q2CcM+qvBpRhXp5DVY9kIvv26Z84Oo4Palbu4AfBqgVS1keSIK8Fxkhz9nDaNKCWOI3QIRQ8Y9+D3hRmOYTuwFfppaBW1nCYAFop6Y/iukVTSMfZ+I56dwHyA4x6yOsVqCv58tlf7L/SjsszhbkRRakoRjOLKRfNiZvBzY8fLXTARVmgj8fWGyjq/8w4JkjrEDBmQEShAfqd6ySQhZUEbi2VSTvo4tE09rIF53XnBSxDrcZ5vF9TYR/hU38VDuiJON06EGgKzudOCDUVP3lflGni1u6BG3bkMYeQPXkhxgplfqW9kT9KuxnCStdTZrGNWgXRYywUon23j/wCSM0934wgJoLqlnBOhsCVbprErYB4ndIHB4nkQWD6sCFqkkp72YItRLHuOSu1QCGtW7Ba77FH05ZSkNUu0yjF+rHlPEarD0g6vrXQyiSnX5UWQ4JucIZOVbbwVFtp6nrZcaJQD1HFjguE8+Tg8ml+UcdeDFyRENXwo3plse2bQSIfyU4t5JSy5KmQ6vRsSHYemC535MTqkvC9Z0HKCJFxSTWEf9LHorjza5GVTrXTU3pyqmAhYH5peIoeowsAhuqpsrVdvlmLhAYYGCsH7zvKIcHQ5MSyhTpgOFQVWKKBF1dWS8a4Pjok6S4JKSPG8YToTVKO2oPGasGZDJG8Dey7/jToJ5ewu+GtPcL54a/mk7hLnV3JAOKmwx78QX2b4RZpmGcaEW+ARyAtHJWOf+i3IFyvhoYJAMW4igClZwaFXuvTMapw/VpI1vMuusFz29MtGkDDAnCIJVprbDiX1h6HA9ppI78FZfHMdHvYYV3TFllWDtQ9uXaGHTGxjOa4quSXNlaPIkY++oat0Vai2owNtTerCQ2OnnLNLelOQrCiJ5gmgl/VqMXj1YyunHwmyRAV31Y9jBwt9nd2NbfO8VBcPdezPg9j05fxFtbdjmOmM1JyWO7stBVwmzBzzF3++NTYp4U1RoL2PfYDiVdreCpV73bw69qzdijLBw0ZkpZRaUiLUMC0RTarp/PS9XvUHH1PxOTEWE0GPEqraKzGirCNAgkMblmVal+fzBnblXnLSXGUHC0gPtlBci+T3PV6PkSAqbFgcSWQMrfDNWqnvSL4BliQEFfMDkSIxrXv8B44BuGFad7oFTZ2fwp/XSdkgfW5QtVC+IY/e8IKNALav5Ijb+loAffOXq3ugDzsfqOkNY51LlVVxRe+KvxHjbpRMjpxauuaTPU6on0DudA1xkDPEXUS8rpKcBRfa+xEqOQLY7FKHT3wE30nAIkkMbi8GTh4iEQ0RI0n36+nePGQeL56luZEXCedK6KZw==">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmRetractionSearch'];
+if (!theForm) {
+    theForm = document.frmRetractionSearch;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./Physical Review B_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./Physical Review B_files/WebResource(1).axd" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F1918523">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="C938VS617vP0mj1794NARBAuA2UEWtf+Z7WX5DRYJ0MCV+EFJS8fzrpdT978b0TuvWNjFbZ0iYDEHwZ67g0HYX2nU3zzAfQT8u5sUpnupPJlhY96wg0t1YYCsZnCl4qQYkkGfizLZlRvLExeJqxMgkIGtmT/OWJMCQQC9WC+stVA+ZX6Djr9axTQ5s9pWEQVRcuJcas7xXR8UaUFxB6IpxsxcKQkOuSddkLjlQ5AZvPWS2e6v/CuthXH6mJRg6YA9otd8oE4oyuaLHp4dWSGVxeDMEp7JSkHyDAlWedQb1JlZj2m+nGtfa7baBjx9a5yHvvmHnP8aHSZFqURz7+CpyD6z8INljY0/+k3Yln3i79UazMITKoNk6stLLjNIDR4Y2tw8gusBbmZgMIqfohQvFJxPXEdhDRDQZe0XUD0c/YYjahp2NE61DgDKaC7TntdZ6c7BBk4RAW2gs23eKgQ63x5pA+W392tlLQk3YR7i64QpPIdRjxMbJ8vtRvMrTNb21+IygYOkluvTGhMzuChlVNmYPwBe/DAH05e7IYKgdKLmbkeRfj/NlZqaKugfwTIKKB8jClzR9AnG8qFKL/pTOfIUCI/x874keMVujGKncG9qdNEHeAok/L5EIuVSnHmGVIp2gxGgW9GYCA/8gBjKzuMRDxiqVassWKeuSQEdTAmUMbMci4waLRVAnP0YY4l3kHt2IgA+gGEDICy+3Dc0k8OAoYvvSsVENN+R4tq+Ws9/c6kb9a6MBPG9Adui3BcIUcyQ5YHYONOzLd9HaH5kVqlk/1xq/jG0Ne7Y7ZY1KsgZpg6VKlmv23Y5dtkeLmpiq84Lv2hg/E61lX0K1mB0HZrng2EMzI19NUyTkQn5epqmPSxFFfnUa3mI301paWhJMSMw8H2ygpIVLSS2HdRBZGo3vR3O+yQenCjw88N5dy7TTE9/PaF1SdUnlvN1VElxLlE/qYNMhQ6Bl1xCJzqgtVAXW5O7QeRR5t4dNAJrPyrk9H48hv1DEmEwfyEh4ututR+T+sDOFNeBCpNMQif13UMx/jgxTyBsKudek9hLcdhj1hZklOogtBnvAQ2Yia6N4MxzZ4HeBklvxoFx9z14UejoOW/roRu2oIms0338VfjJ+gYISAW7hyglj2b9v9UvAWnahbeI/y2sqFP4QtfF/jRoVf9Gxy80n/pmhqGbv96RyC0L94Fi6i62xDs0IMJiP9vqPP8/XfYMs4eNBlsKbeBodkoazLzFnRx5IUqpiiQnmLuhvp+vGWBtkgotnxl62Z2Z5WxO9rdE9fWbnhCiOwNtCLMDEdxMv1lNDtbwB/mVCbfZIWuXBJGpGhZ8L9qnMp2MfzjqM8tkYzs/JUrJl67U0d6iKpzeB9EVn9ks/rxSvt1Bc4aQuZnMzAXVHy775+hcLu6kQrObItTYm8YgWx7hIU50AekL7vGcXTj6k1N2Mswa7WP2M5NghuMe2wMgoSvPwG3Nd7yYJPrMnH+2mCJFhyCwyMblsDKtnLVnWRfIEUFDu6fmObucZK5sQSB9olh/7m4jbe0P1OfXW65qPRnRptMrkg0VAQCbtOmQOYHZz9Vs3aOFiqeUVAtKHppTmhbLXYW/TX2hB00AusRqsCGQRlAoyR0nu7tn7ySABFJHTu60i5PLrOPYQ8sZnMA1yhIgwAIFfgCr2olCVCXGKX2iMXJ4RPxYKTaaOF8tjBka+PKE+qG9EisHZ9eG0UlRTMopqByKG7SoREVxeIhl6rX/LEfsrclACsSnHnk7MWxnnbZga/lHsoXh/Od7ZBd7PfvLi3LhfsnejpqqlCi5agoNC+930XxsNi89YW2N2vf/jQez14gw9pQcW3mY4qDecKfeA==">
+</div>
+    <div id="divTitle" class="" style="width: 78%;">
+        <div style="width:4%;display:inline-block">
+            <h2 class="smallFont"><a href="http://www.retractionwatch.com/" id="lnkHelp" style="float:right;display:none;" target="_blank">Help</a></h2>
+        </div>
+          <div id="wrap" style="float:right">
+            <div id="regbar">
+                <div id="navthing">
+                    <h2 class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" id="loginform">Login</a>
+                        <a id="logoutform" style="display:none" href="javascript:__doPostBack(&#39;logoutform&#39;,&#39;&#39;)">Logout</a>
+                        <a id="hrefAdmin" href="javascript:goToAdmin();" style="margin-left:20px;display:none;">Admin</a>
+                          <a id="hrefDownload" style="margin-left:20px;display:none" onclick="return(downloadWarning());" href="javascript:__doPostBack(&#39;hrefDownload&#39;,&#39;&#39;)">Download</a>
+                    </h2>    
+                    <div class="login">
+                        <div class="arrow-up"></div>
+                        <div class="formholder"> 
+                            <div id="loginDiv" class="randompad">
+                                <fieldset>
+                                    <label name="email" for="txtEmail" style="float:left;">Email</label>
+                                    
+                                    <input name="txtEmail" type="email" id="txtEmail" required="required" oninvalid="this.setCustomValidity(&#39;Please enter an email address&#39;)" oninput="this.setCustomValidity(&#39;&#39;)">
+                                    
+                                    <label name="password" style="float:left;" for="txtPSWD">Password</label>
+                                    <input name="txtPSWD" type="password" id="txtPSWD" required="required" oninvalid="this.setCustomValidity(&#39;Please enter a password&#39;)" oninput="this.setCustomValidity(&#39;&#39;)">
+                                    <input name="btnLogin" type="submit" id="btnLogin" value="Login">
+ 
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+        </div>
+        <table width="100%">
+            <tbody><tr>
+                <td class="logo smallFont" style="color:darkblue;">
+                    <p style="float:right"><span>Version: </span><span id="lblVersionNo" style="font-size: 12px; font-weight: bold;">1.0.5.5</span></p> 
+                 </td>
+            </tr>
+        </tbody></table>
+    </div>
+   <div id="divContent" style="width: 100%; margin-top: -40px;" class="searchBox">
+    <div>
+    <table id="tblSearch" style="width:80%;margin:0 auto;" class="smallFont">
+        <tbody><tr>
+            <th colspan="2">
+                
+                The Retraction Watch Database<br>
+                <input type="button" name="btnRetractionAdd" value="" onclick="_spFormOnSubmitCalled = false; _spSuppressFormOnSubmitWrapper=true;__doPostBack(&#39;btnRetractionAdd&#39;,&#39;&#39;)" id="btnRetractionAdd" title="Add Notice" style="border-width:0px;height:36px;width:70px;margin-top:-12px;margin-right:4px;margin-bottom:4px; display:none;float:right;background-image:url(&#39;Images/BtnAdd.png&#39;);">
+                
+                 <span id="lblMessage">Please see this <a style="color:darkblue" href="https://retractionwatch.com/retraction-watch-database-user-guide/">user guide</a> before you get started</span>
+            </th>
+        </tr>
+        
+        <tr>
+            <td style="width:68%" class="smallFont">
+                <table>
+                <tbody><tr class="searchLeft HeadText HeadMini">
+                     <td class="smallFont">
+                        <span id="lblAuthor" title="Type or select from list and press Search button" sqlparm="Author">Author(s):</span>
+                    </td>
+                    <td style="white-space:nowrap" class="smallFont">
+                        <input name="txtSrchAuthor" type="text" id="txtSrchAuthor" placeholder="Type to search" autohint="" attrcode="SAU" searchtype="Expert" bool="Y" sqlparm="Author" onfocus="this.CursorPosition = this.value.length;" onblur="$(&#39;#lstAuthor&#39;).hide();nextSearch=&#39;Expert&#39;;" style="width:90%;" class="ui-autocomplete-input" autocomplete="off" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgAuthor" src="./Physical Review B_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstAuthor&#39;));" alt="Drop">  
+                    </td>
+                     <td style="width:10%" class="smallFont">
+                        <span id="lblCoutry" title="Type or select from list and press Seach button" sqlparm="Country">Country(s):</span>
+                    </td>
+                    <td style="white-space:nowrap" class="smallFont">
+                        <input name="txtSrchCountry" type="text" id="txtSrchCountry" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" onblur="$(&#39;#lstCountry&#39;).hide();nextSearch=&#39;Expert&#39;;" style="width:88%;" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgCountry" src="./Physical Review B_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstCountry&#39;));" alt="Drop">  
+                    </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                     <td class="smallFont">
+                        <span id="lblTitle" title="Enter search Title and press Search button" sqlparm="Title">Title:</span>
+                    </td>
+                    <td colspan="3" style="width:100%" class="smallFont">
+                             <input name="txtSrchTitle" type="text" id="txtSrchTitle" attrcode="STL" autohint="" keepperiod="Y" placeholder="Type to search" onfocus="this.CursorPosition = this.value.length;" searchtype="Expert" bool="Y" class="ui-autocomplete-input" autocomplete="off" title="Use AND / OR / AND NOT operators for boolean search">
+                    </td>
+                </tr> 
+                <tr class="searchLeft HeadText HeadMini">
+                    <td class="smallFont">
+                    <span id="lblSrchReason" title="Type or select from list and press Search button" sqlparm="Reason">Reason(s) for Retraction:</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                    <input name="txtSrchReason" type="text" id="txtSrchReason" attrcode="SRE" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" sqlparm="Reason" onblur="$(&#39;#lstReason&#39;).hide();nextSearch=&#39;Expert&#39;;" title="Use AND / OR / AND NOT operators for boolean search">
+                    <img id="img2" src="./Physical Review B_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstReason&#39;));" alt="Drop">     
+                    </td>
+                </tr>   
+                <tr class="searchLeft HeadText HeadMini">
+                 <td class="smallFont">
+                    <span id="lblSubject" title="Type or select from list and press Search button" sqlparm="Subject">Subject(s):</span>
+                    </td>
+                    <td style="white-space:nowrap" class="smallFont">
+                        <input name="txtSrchSubject" type="text" id="txtSrchSubject" attrcode="SSU" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" onblur="$(&#39;#lstSubject&#39;).hide();nextSearch=&#39;Expert&#39;;" style="width:90%;" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgSubject" src="./Physical Review B_files/downArrow.png" class="btnImage" title="Search All Subjects" onclick="dropDownClick($(this).prev(),$(&#39;#lstSubject&#39;));" alt="Drop"> 
+                        <img id="imgSubjectGroup" style="margin-left:-5px" title="Search by Subject Groups" src="./Physical Review B_files/group.png" class="btnImage" onclick="dropDownClick($(this).closest(&#39;td&#39;).find(&#39;input&#39;),$(&#39;#lstSubjectGroup&#39;));" alt="Drop">        
+                        
+                    </td>
+                    <td class="smallFont">
+                    <span id="lblType" title="Type or select from list and press Search button" sqlparm="ArticleType">Article<br>Type(s):</span>
+                    </td>
+                    <td style="white-space:nowrap" class="smallFont">
+                        <input name="txtSrchType" type="text" id="txtSrchType" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" onblur="$(&#39;#lstType&#39;).hide();nextSearch=&#39;Expert&#39;;" style="width:88%;" title="Use AND / OR / AND NOT operators for boolean search">
+                    <img id="imgType" src="./Physical Review B_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).closest(&#39;td&#39;).find(&#39;input&#39;),$(&#39;#lstType&#39;));" alt="Drop">     
+                    </td>
+                </tr>   
+                <tr class="searchLeft HeadText HeadMini">
+                    <td class="smallFont">
+                        <span id="lblSrchJournal" title="Type or select from list and press Search button" sqlparm="Journal">Journal:</span>
+                     </td>
+                     <td colspan="3" class="smallFont">
+                        
+                         <input name="txtSrchJournal" type="text" value="Physical Review B" id="txtSrchJournal" autohint="" attrcode="SJO" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" sqlparm="Journal" onblur="$(&#39;#lstJournal&#39;).hide();nextSearch=&#39;Expert&#39;;" class="ui-autocomplete-input" autocomplete="off" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgDroplstJournal" src="./Physical Review B_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstJournal&#39;));" alt="Drop">     
+                     </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                    <td class="smallFont">
+                        <span id="lblPublisher" sqlparm="Publisher">Publisher:</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                       
+                        <input name="txtSrchPublisher" type="text" id="txtSrchPublisher" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" sqlparm="Publisher" onblur="$(&#39;#lstPublisher&#39;).hide();nextSearch=&#39;Expert&#39;;" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgPublisher" src="./Physical Review B_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstPublisher&#39;));" alt="Drop">     
+                    </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                    <td class="smallFont">
+                        <span id="lblAffiliation" sqlparm="Institution">Affiliation(s):</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                       <input name="txtSrchInstitution" type="text" id="txtSrchInstitution" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" title="Use AND / OR / AND NOT operators for boolean search">   
+                    </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                     <td class="smallFont">
+                        <span id="lblNotes" title="Enter search Notes and press Search button">Notes:</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                        <input name="txtSrchNotes" type="text" id="txtSrchNotes" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" title="Use AND / OR / AND NOT operators for boolean search">
+                    </td>
+                    <td colspan="2" class="hideWrite smallFont">
+                        <img id="imgAdminNotes" border="0" title="Admin Notes" src="./Physical Review B_files/NotesAdmin.png" alt="Notes" class="NotesAdmin logo" height="20px" style="cursor: default;">
+                        <input name="txtSrchAdminNotes" type="text" id="txtSrchAdminNotes" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" style="width:86%;" title="Use AND / OR / AND NOT operators for boolean search">
+                    </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                     <td class="smallFont">
+                        <span id="lblSrchURL" title="Enter search URL and press Search button" sqlparm="URL">URL:</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                        <input name="txtSrchURL" type="text" id="txtSrchURL" searchtype="Expert" onfocus="this.CursorPosition = this.value.length;">
+                    </td>
+                </tr>
+                </tbody></table>
+            </td>
+            <td style="vertical-align:top" class="smallFont">
+                <table cellspacing="0">
+                    <tbody><tr>
+                        <td class="searchRight HeadText HeadMini smallFont" colspan="4" style="text-align:center">
+                            <span style="margin-top:-4px">Original Paper</span>
+                        </td>
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini">
+                        <td class="hasTopBorder hasLeftBorder smallFont">
+                            <span id="lblOriginalDateFrom" sqlparm="OriginalPaperFromDate">From Date:</span>
+                        </td>
+                        <td class="hasTopBorder rDates smallFont">
+                            <input name="txtOriginalDateFrom" type="text" maxlength="10" id="txtOriginalDateFrom" class="dateField" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;return(validateDate(this));">
+                            
+                        </td>
+                        <td class="hasTopBorder smallFont">
+                            <span id="lblOriginalDateTo" sqlparm="OriginalPaperToDate">To:</span>
+                        </td>
+                        <td class="hasTopBorder hasRightBorder rDates smallFont">
+                            <input name="txtOriginalDateTo" type="text" maxlength="10" id="txtOriginalDateTo" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;if (validateDate(this)) dateCompare($(&#39;#txtOriginalDateFrom&#39;)[0], this);">
+                            
+                        </td>
+                       
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder smallFont">
+                            <span id="lblOriginalPubMedID" sqlparm="OriginalPaperPubMedID">PubMedID:</span>
+                        </td>
+                        <td class="rPubMed smallFont">
+                            <input name="txtOriginalPubMedID" type="text" maxlength="8" id="txtOriginalPubMedID" class="clNumber" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;">
+                        </td>
+                        <td class="smallFont">
+
+                        </td>
+                        <td colspan="1" class="hasRightBorder smallFont">
+                            <span class="timeStamp" style="float:left">mm/dd/yyyy</span>
+                        </td>
+                    </tr>
+                     <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder hasBottomBorder smallFont">
+                            <span id="lblOriginalDOI" sqlparm="OriginalPaperDOI">DOI:</span>
+                        </td>
+                        <td class="hasRightBorder hasBottomBorder smallFont" colspan="3">
+                            <input name="txtOriginalDOI" type="text" maxlength="100" id="txtOriginalDOI" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="searchRight HeadText HeadMini smallFont" style="text-align:center">
+                            <span id="lblRetracHead">Retraction or Other Notices</span>
+                        </td>
+                    </tr>
+                     <tr class="searchRight HeadText HeadMini">
+                        <td class="hasTopBorder hasLeftBorder smallFont">
+                            <span id="lblFromDate" sqlparm="RetractionFromDate">From Date:</span>
+                        </td>
+                        <td class="hasTopBorder rDates smallFont">
+                            <input name="txtFromDate" type="text" maxlength="10" id="txtFromDate" class="dateField" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;validateDate(this);">
+                            
+                        </td>
+                        <td class="hasTopBorder smallFont">
+                            <span id="lblToDate" sqlparm="RetractionToDate">To:</span>
+                        </td>
+                        <td class="hasTopBorder hasRightBorder rDates smallFont">
+                            <input name="txtToDate" type="text" maxlength="10" id="txtToDate" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;if (validateDate(this)) dateCompare($(&#39;#txtFromDate&#39;)[0], this);">
+                        </td>
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder smallFont">
+                            <span id="lblPubMedID" sqlparm="RetractionPubMedID">PubMedID:</span>
+                        </td>
+                        <td class="rPubMed smallFont"> 
+                            <input name="txtPubMedID" type="text" maxlength="8" id="txtPubMedID" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;" class="clNumber">
+                        </td>
+                        <td class="smallFont">
+                        </td>
+                         <td class="hasRightBorder smallFont" style="">
+                             <span class="timeStamp" style="float:left">mm/dd/yyyy</span>
+                             
+                         </td>
+                    </tr>
+                     <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder smallFont">
+                            <span id="lblDOI" sqlparm="RetractionDOI">DOI:</span>
+                        </td>
+                        <td class="hasRightBorder smallFont" colspan="3">
+                            <input name="txtDOI" type="text" maxlength="100" id="txtDOI" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;">
+                        </td>
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder hasBottomBorder smallFont">
+                            <span id="lblNotice" sqlparm="RetractionNature">Nature of Notice:</span>
+                        </td>
+                        <td class="hasBottomBorder smallFont" colspan="1">
+                            <select name="drpNature" id="drpNature" searchtype="Expert" style="width:95%;">
+	<option selected="selected" value=""></option>
+	<option value="Retraction">Retraction</option>
+	<option value="Expression of concern">Expression of Concern</option>
+	<option value="Correction">Correction</option>
+
+</select>
+                        </td>
+                        <td class="hasBottomBorder smallFont">
+                            <span id="lblPaywalled" sqlparm="Paywalled">Paywalled:</span>
+                        </td>
+                        <td class="hasRightBorder hasBottomBorder smallFont">
+                            <select name="drpSrchPaywalled" id="drpSrchPaywalled" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;" style="width:89%;">
+	<option selected="selected" value=""></option>
+	<option value="Y">Yes</option>
+	<option value="N">No</option>
+	<option value="U">Unknown</option>
+
+</select>
+                        </td>
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini hideAdmin">
+                        <td class="smallFont">
+                            <span id="lblUser">Created By User:</span>
+                        </td>
+                        <td class="smallFont">
+                            <select name="drpUser" id="drpUser" attrcode="SUS" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;" style="width:95%;">
+	<option selected="selected" value=""></option>
+	<option value="2">aabritis@gmail.com</option>
+	<option value="502">allysonalisha@gmail.com</option>
+	<option value="503">ashley.morrison@austin.utexas.edu</option>
+	<option value="504">bavrumov@hotmail.com</option>
+	<option value="505">dilinikumaratunga@gmail.com</option>
+	<option value="506">fredbeldin@gmail.com</option>
+	<option value="507">jim.eakins@gmail.com</option>
+	<option value="508">jon.jeffryes@gmail.com</option>
+	<option value="509">marissa.shieh@gmail.com</option>
+	<option value="510">mehlibrarian@gmail.com</option>
+	<option value="511">michael.e.koziol@gmail.com</option>
+	<option value="512">mjk4219@gmail.com</option>
+	<option value="513">NA</option>
+	<option value="514">nicole.wetsman@gmail.com</option>
+	<option value="515">pmccall@rollins.edu</option>
+	<option value="516">renata.massion@gmail.com</option>
+	<option value="517">rheaphine@gmail.com</option>
+	<option value="518">rkumaratunga@gmail.com</option>
+	<option value="519">rrinaldi@mail.usf.edu</option>
+	<option value="520">rsinn@jhu.edu</option>
+	<option value="521">s.heidij@gmail.com</option>
+	<option value="522">sparksjo92@gmail.com</option>
+
+</select>
+                            
+                        </td>
+                        <td class="rDates smallFont">
+                            <input name="txtCreateFromDate" type="text" maxlength="10" id="txtCreateFromDate" class="dateField" placeholder="mm/dd/yyyy" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;validateDate(this);">
+                        </td>
+                        <td class="rDates smallFont">
+                            <input name="txtCreateToDate" type="text" maxlength="10" id="txtCreateToDate" class="dateField" placeholder="mm/dd/yyyy" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;validateDate(this);">
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+            </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                   <td class="smallFont">
+                    <input type="button" name="btnSearch" value="" onclick="if (checkSearchRequest(this)){_spFormOnSubmitCalled = false; _spSuppressFormOnSubmitWrapper=true;}else return false;__doPostBack(&#39;btnSearch&#39;,&#39;&#39;)" id="btnSearch" searchtype="Expert" style="border-width:0px;border-style:None;height:36px;width:70px;background-image:url(&#39;Images/BtnSearch.png&#39;);float:right;" title="Select search criteria and click to start search ">
+                       <a id="hlinkClear" title="Clear Search" onclick="clearSearch(&#39;Expert&#39;); $(&#39;#hidClearSearch&#39;).val(&#39;Y&#39;);return false;" style="color:darkblue;float:left;
+                                        font-size:14px;text-decoration: underline;">Clear Search</a>
+                        <div class="spinner" style="float:right;margin-right:200px;width:4%;">
+                           <img id="imgSpinner" src="./Physical Review B_files/spinner.gif" style="display:none;float:right;" alt="Please wait..."> 
+                        </div>
+                    </td>
+                     <td align="right" class="smallFont">
+                         
+
+                         
+                     </td>
+                </tr>
+                     <tr class="searchLeft HeadText HeadMini smallFont">
+                     <td class="error smallFont">
+                        <span id="lblAppName" clearctl="Y" style="color:Yellow;background-color:Transparent;font-family:Verdana;font-size:13px;font-weight:bold;color: MidnightBlue;"></span>
+                         <span id="lblError" clearctl="Y" style="display:inline-block;color:Red;background-color:Yellow;border-color:Blue;border-width:1px;border-style:Solid;text-align:center;display:none;"></span> 
+                       </td>  
+                       <td colspan="2" style="text-align:center;" class="smallFont">
+
+                           <span id="lblDateError" clearctl="Y" style="display:inline-block;color:Red;background-color:Yellow;border-color:Blue;border-width:1px;border-style:Solid;text-align:center;display:none;"></span>  
+                     </td>
+                 </tr>
+            </tbody></table>
+    </div>
+    <input type="hidden" name="hidClearSearch" id="hidClearSearch">
+    <input type="hidden" name="hidSqlParmNames" id="hidSqlParmNames" value="Journal;Journal;Journal;Journal;Journal;">
+    <input type="hidden" name="hidEmptySqlParmNames" id="hidEmptySqlParmNames">
+   <div id="divGridRetraction" style="margin:0 auto;display:table">
+        <span id="ScrollGrid" style="OVERFLOW: auto; background-color: whitesmoke;">
+                    <div>
+	<table cellspacing="0" cellpadding="2" rules="all" clearctl="Y" id="grdRetraction" style="background-color:WhiteSmoke;border-color:Gray;border-width:1px;border-style:Solid;font-family:Times New Roman;height:8px;border-collapse:collapse;overflow: auto" class="smallFont">
+		<tbody><tr>
+			<th class="hidden smallFont" scope="col">RID</th><th class="header headerSortUp smallFont" scope="col" style="border-color:White;border-width:1px;border-style:solid;white-space:nowrap;">Retraction or Other Notices<br>Title/Subject(s)/Journal --- Publisher/Affiliation(s)/Retraction Watch Post URL(s)<br><span class="totalItems">19 Item(s) Found</span></th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Reason(s)</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Author(s)</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Original Paper<br>Date/PubMedID/DOI</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Retraction or Other Notices<br>Date/PubMedID/DOI</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Article Type(s)<br>Nature of Notice</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;" class="smallFont">Countries<br>Paywalled?<br>Notes</th>
+		</tr><tr class="mainrow" style="background-color:LightYellow;border-color:Black;border-width:1px;border-style:Solid;">
+			<td class="hidden smallFont" style="color:Black;">18970</td><td id="grdRetraction_Title_0" title="18970" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$18970&#39;)" style="cursor:default;"><span class="rTitleNotIE">At which magnetic field, exactly, does the Kondo resonance begin to split? A Fermi liquid description of the low-energy properties of the Anderson model</span><br><span class="rSubject">(PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Dahlem Center for Complex Quantum Systems and Institut für Theoretische Physik, Freie Universität Berlin, Arnimallee 14, 14195 Berlin, Germany</span><span class="rInstitution">
+BME-MTA Exotic Quantum Phase Group, Institute of Physics, Budapest University of Technology and Economics, H-1521 Budapest, Hungary</span><span class="rInstitution">
+Department of Physics, University of Oradea, 410087, Oradea, Romania</span><span class="rInstitution">
+Physics Department, Arnold Sommerfeld Center for Theoretical Physics and Center for NanoScience, Ludwig-Maximilians-Universität München, 80333 München, Germany</span><span class="rInstitution">
+Laboratoire Pierre Aigrain, École normale supérieure, PSL Research University, CNRS, Université Pierre et Marie Curie, Sorbonne Universités, Université Paris Diderot, Sorbonne Paris-Cit, 24 rue Lhomond, 75231 Paris Cedex 05, France</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Error in Analyses</div><div class="rReason">+Error in Data</div><div class="rReason">+Error in Results and/or Conclusions</div><div class="rReason" style="border-bottom-style: none;">+Retract and Replace</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">MIchele Filippone</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Catalin Pascu Moca</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Jan von Delft</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Christophe Mora</a></td><td style="border-color:Silver;" class="smallFont">04/05/2017<br>00000000<br><span class="rNature">10.1103/PhysRevB.95.165404</span></td><td style="border-color:Silver;" class="smallFont">08/06/2018<br>00000000<br><span class="rNature">10.1103/PhysRevB.98.079902</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>France<br>Germany<br>Hungary<br>Romania<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display: block;" title="see https://journals.aps.org/prb/abstract/10.1103/PhysRevB.98.075404" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="rolf  https://journals.aps.org/prb/abstract/10.1103/PhysRevB.98.079902#fulltext
+
+The original published version of this paper has been retracted because it contained a trivial but fatal sign error that led to incorrect conclusions. The corrected version, which pinpoints the origin and consequences of the sign error and contains a different set of conclusions, has been published separately as Ref. [1]." class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow" style="background-color:White;">
+			<td class="hidden smallFont" style="color:Black;">5396</td><td id="grdRetraction_Title_1" title="5396" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$5396&#39;)" style="cursor:default;"><span class="rTitleNotIE">Bulk Superconductivity and Fully Gapped Superconducting State in Ba-doped Phenanthrene</span><br><span class="rSubject">(BLS) Biochemistry; (PHY) Chemistry; (PHY) Engineering - Electrical; (PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Quantum-Phase Electronics Center (QPEC) and Department of Applied Physics, University of Tokyo, Tokyo 113-8656, Japan</span><span class="rInstitution" style="border-bottom: 2px solid rgb(0, 102, 33);">
+Correlated Electron Research Group (CERG), RIKEN-ASI, Wako 351-0198, Japan</span><br></a><a href="http://retractionwatch.com/2013/05/14/mislabeled-sample-leads-to-a-chain-reaction-of-physics-retractions/" class="urls">http://retractionwatch.com/2013/05/14/mislabeled-sample-leads-to-a-chain-reaction-of-physics-retractions/</a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Error in Data</div><div class="rReason">+Error in Image</div><div class="rReason">+Error in Methods</div><div class="rReason">+Error in Results and/or Conclusions</div><div class="rReason">+Unreliable Data</div><div class="rReason">+Unreliable Image</div><div class="rReason" style="border-bottom-style: none;">+Unreliable Results</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Yuichi Kasahara</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Yuki Takeuchi</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Yoshihiro Iwasa</a></td><td style="border-color:Silver;" class="smallFont">06/20/2012<br><br><span class="rNature">10.1103/PhysRevB.85.214520</span></td><td style="border-color:Silver;" class="smallFont">05/06/2013<br><br><span class="rNature">10.1103/PhysRevB.87.179902</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>Japan<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow">
+			<td class="hidden smallFont" style="color:Black;">5405</td><td id="grdRetraction_Title_2" title="5405" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$5405&#39;)" style="cursor:default;"><span class="rTitleNotIE">S-wave Superconductivity in Barium-doped Phenanthrene as Revealed by Specific-heat Measurements</span><br><span class="rSubject">(PHY) Engineering - Electrical; (PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Hefei National Laboratory for Physical Science at Microscale and Department of Physics, University of Science and Technology of China</span><span class="rInstitution" style="border-bottom: 2px solid rgb(0, 102, 33);">
+Hefei, Anhui 230026, People’s Republic of China 2National Synchrotron Radiation Laboratory, University of Science and Technology of China, Hefei, Anhui 230029, People’s Republic of China</span><br></a><a href="http://retractionwatch.com/2013/05/14/mislabeled-sample-leads-to-a-chain-reaction-of-physics-retractions/" class="urls">http://retractionwatch.com/2013/05/14/mislabeled-sample-leads-to-a-chain-reaction-of-physics-retractions/</a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Error in Data</div><div class="rReason">+Error in Methods</div><div class="rReason">+Error in Results and/or Conclusions</div><div class="rReason">+Unreliable Data</div><div class="rReason" style="border-bottom-style: none;">+Unreliable Results</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Jianjun Ying</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Xiangfeng Wang</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Yajun Yan</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Ziji Xiang</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Xigang Luo</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Zhe Sun</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Xianhui Chen</a></td><td style="border-color:Silver;" class="smallFont">05/31/2012<br><br><span class="rNature">10.1103/PhysRevB.85.180511</span></td><td style="border-color:Silver;" class="smallFont">05/06/2013<br><br><span class="rNature">10.1103/PhysRevB.87.179901</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>China<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow" style="background-color:White;">
+			<td class="hidden smallFont" style="color:Black;">5398</td><td id="grdRetraction_Title_3" title="5398" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$5398&#39;)" style="cursor:default;"><span class="rTitleNotIE">Electrical Properties of Single Crystals of Rigid Rodlike Conjugated Molecules</span><br><span class="rSubject">(PHY) Engineering - Electrical; (PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Bell Laboratories, Lucent Technologies, 700 Mountain Avenue, Murray Hill, New Jersey, USA</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Falsification/Fabrication of Data</div><div class="rReason">+Investigation by Company/Institution</div><div class="rReason">+Misconduct - Official Investigation/Finding</div><div class="rReason" style="border-bottom-style: none;">+Misconduct by Author</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Jan Hendrik Schon</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Christian Kloc</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">R A Laudise</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Bertram Batlogg</a></td><td style="border-color:Silver;" class="smallFont">12/18/2002<br>00000000<br><span class="rNature">10.1103/PhysRevB.66.249904</span></td><td style="border-color:Silver;" class="smallFont">12/20/2012<br>00000000<br><span class="rNature">10.1103/PhysRevB.66.249904</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>United States<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display: block;" title="see https://journals.aps.org/reports/lucentreport.html;" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="https://journals.aps.org/prb/pdf/10.1103/PhysRevB.66.249904
+
+On September 25th 2002, Bell Laboratories, Lucent Technologies, announced the findings of an independent committee it
+formed to investigate the validity of certain research reported from 1998 to 2002 by teams of Bell Labs and other scientists.
+In its report,1 the committee concludes that ‘‘based on the preponderance of the evidence, Hendrik Scho¨n committed scientific
+misconduct as defined by the falsification or fabrication of data, such that the research is not accurately represented in the
+research record.’’
+As a result of this report, all of the authors of the above-mentioned manuscript ~Dr. Laudise is deceased! have agreed to a
+complete retraction of the paper" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow">
+			<td class="hidden smallFont" style="color:Black;">5403</td><td id="grdRetraction_Title_4" title="5403" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$5403&#39;)" style="cursor:default;"><span class="rTitleNotIE">Superconductivity in the Rh-based Heusler Family MRh2Sn</span><br><span class="rSubject">(PHY) Engineering - Electrical; (PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Los Alamos National Laboratory, Los Alamos, New Mexico 87545, USA</span><span class="rInstitution">
+Joint Research Center, Institute for Transuranium Elements, European Commission, Postfach 2340, Karlsruhe D-76125, Germany</span><span class="rInstitution">
+Faculty of Applied Physics and Mathematics, Gdansk University of Technology, Narutowicza 11/12, 80-952 Gdansk, Poland</span><span class="rInstitution">
+University of California, Irvine, California 92697, USA</span><span class="rInstitution" style="border-bottom: 2px solid rgb(0, 102, 33);">Department of Chemistry, Princeton University, Princeton, New Jersey 08544, USA</span><br></a><a href="http://retractionwatch.com/2011/02/07/biologist-realizes-hes-been-studying-cadbury-egg-mislabeled-bottle-leads-to-phys-rev-b-retraction/" class="urls">http://retractionwatch.com/2011/02/07/biologist-realizes-hes-been-studying-cadbury-egg-mislabeled-bottle-leads-to-phys-rev-b-retraction/</a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Doing the Right Thing</div><div class="rReason">+Error in Data</div><div class="rReason" style="border-bottom-style: none;">+Error in Materials (General)</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Tomasz W Klimczuk</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">K Gofryk</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">C H Wang</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">J M Allred</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">F Ronning</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">W Sadowsk</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">J C Griveau</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">E Colineau</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">D Safarik</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">J D Thompson</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Robert J Cava</a></td><td style="border-color:Silver;" class="smallFont">10/14/2010<br>00000000<br><span class="rNature">10.1103/PhysRevB.82.134520</span></td><td style="border-color:Silver;" class="smallFont">01/04/2011<br>00000000<br><span class="rNature">10.1103/PhysRevB.83.019901</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>Germany<br>Poland<br>United States<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow" style="background-color:White;">
+			<td class="hidden smallFont" style="color:Black;">5406</td><td id="grdRetraction_Title_5" title="5406" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$5406&#39;)" style="cursor:default;"><span class="rTitleNotIE">Systematic As-75 NMR Study of the Dependence of Low-lying Excitations on F Doping in the Iron Oxypnictide LaFeAsO1-xFx</span><br><span class="rSubject">(PHY) Chemistry; (PHY) Engineering - Electrical; (PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Department of Physics, Graduate School of Science, Kyoto University, Kyoto 606-8502, Japan</span><span class="rInstitution">
+TRIP, JST, Sanban-cho Building, 5, Sanban-cho, Chiyoda, Tokyo 102-0075, Japan</span><span class="rInstitution">
+ERATO-SORST, JST, Tokyo Institute of Technology, Yokohama 226-8503, Japan</span><span class="rInstitution">
+Frontier Research Center, Tokyo Institute of Technology, Yokohama 226-8503, Japan</span><span class="rInstitution">
+Materials and Structures Laboratory, Tokyo Institute of Technology, Yokohama 226-8503, Japan</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Duplication of Text</div><div class="rReason" style="border-bottom-style: none;">+Euphemisms for Duplication</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Yusuke Nakai</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Shunsaku Kitagawa</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Kenji Ishida</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Yoichi Kamihara</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Masahiro Hirano</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Hideo Hosono</a></td><td style="border-color:Silver;" class="smallFont">01/11/2009<br><br><span class="rNature">10.1103/PhysRevB.79.212506</span></td><td style="border-color:Silver;" class="smallFont">01/11/2010<br><br><span class="rNature">10.1103/PhysRevB.81.019902</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>Japan<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow">
+			<td class="hidden smallFont" style="color:Black;">6894</td><td id="grdRetraction_Title_6" title="6894" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$6894&#39;)" style="cursor:default;"><span class="rTitleNotIE">Low-temperature scaling behavior of BaFe0.5Nb0.5O3</span><br><span class="rSubject">(PHY) Chemistry; (PHY) Materials Science; (PHY) Physics; (PUB) Society/Association Journals; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Department of Physics, Bose Institute, 93/1, Acharya Prafulla Chandra Road, Kolkata-700009, India</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Euphemisms for Plagiarism</div><div class="rReason">+Plagiarism of Article</div><div class="rReason" style="border-bottom-style: none;">+Plagiarism of Text</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Sonali Saha</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">TP Sinha</a></td><td style="border-color:Silver;" class="smallFont">03/19/2002<br><br><span class="rNature">10.1103/PhysRevB.65.134103</span></td><td style="border-color:Silver;" class="smallFont">02/02/2007<br><br><span class="rNature">10.1103/PhysRevB.75.069901</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>India<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow" style="background-color:White;">
+			<td class="hidden smallFont" style="color:Black;">5402</td><td id="grdRetraction_Title_7" title="5402" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$5402&#39;)" style="cursor:default;"><span class="rTitleNotIE">Nonresonant Tunneling Carrier Transfer in Bilayer Asymmetric InAs/GaAs Quantum Dots</span><br><span class="rSubject">(PHY) Engineering - Electrical; (PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Department of Physics, University of Arkansas, Fayetteville, Arkansas 72701, USA</span><span class="rInstitution">
+Max-Born-Institut für Nichtlineare Optik und Kurzzeitspektroskopie, Max-Born-Strasse 2A, 12489 Berlin, Germany</span><span class="rInstitution">
+Ferdinand-Braun-Institut für Höchstfrequenztechnik, Gustav-Kirchhoff-Strasse 4, 12489 Berlin, Germany</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Duplication of Text</div><div class="rReason" style="border-bottom-style: none;">+Euphemisms for Duplication</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Yu I Mazur</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Zh M Wang</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">G G Tarasov</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">G J Salamo</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">J W Tomm</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">V Talalaev</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">H Kissel</a></td><td style="border-color:Silver;" class="smallFont">06/13/2005<br><br><span class="rNature">10.1103/PhysRevB.71.235313</span></td><td style="border-color:Silver;" class="smallFont">01/27/2006<br><br><span class="rNature">10.1103/PhysRevB.73.039904</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>Germany<br>United States<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow">
+			<td class="hidden smallFont" style="color:Black;">6895</td><td id="grdRetraction_Title_8" title="6895" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$6895&#39;)" style="cursor:default;"><span class="rTitleNotIE">Magnetic anisotropy quantitative estimation for the rhombohedral antiferromagnetic crystals containing S-state ions</span><br><span class="rSubject">(PHY) Chemistry; (PHY) Crystallography/Spectroscopy; (PHY) Physics; (PUB) Society/Association Journals; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">L.V. Kirensky Institute of Physics SB RAS, 660036 Krasnoyarsk, Russia</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Duplication of Article</div><div class="rReason">+Euphemisms for Duplication</div><div class="rReason" style="border-bottom-style: none;">+Withdrawal</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">VV Men’shikov</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">SG Ovchinnikov</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">VV Rudenko</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">AN Sudakov</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">VI Tugarinov</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">AM Vorotynov</a></td><td style="border-color:Silver;" class="smallFont">06/02/2005<br><br><span class="rNature">10.1103/PhysRevB.71.224405</span></td><td style="border-color:Silver;" class="smallFont">11/09/2005<br><br><span class="rNature">10.1103/PhysRevB.72.189901</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>Russia<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow" style="background-color:White;">
+			<td class="hidden smallFont" style="color:Black;">6896</td><td id="grdRetraction_Title_9" title="6896" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$6896&#39;)" style="cursor:default;"><span class="rTitleNotIE">Spin fluctuation in single-crystalline terbium probed by temperature-dependent magnetic EXAFS</span><br><span class="rSubject">(HSC) Radiology/Imaging; (PHY) Chemistry; (PHY) Materials Science; (PHY) Physics; (PUB) Society/Association Journals; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">National Synchrotron Radiation Laboratory, University of Science and Technology of China, Hefei 230029, China</span><span class="rInstitution">
+Institut fur Experimentalphysik, Freie Universitat Berlin, Arnimallee 14, D-14195 Berlin-Dahlem, Germany</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Error in Analyses</div><div class="rReason">+Error in Results and/or Conclusions</div><div class="rReason">+Lack of Approval from Author</div><div class="rReason" style="border-bottom-style: none;">+Unreliable Results</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Zhongrui Li</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">H Wende</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">A Scherz</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">G Ceballos</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">K Baberschke</a></td><td style="border-color:Silver;" class="smallFont">10/06/2003<br><br><span class="rNature">10.1103/PhysRevB.68.134406</span></td><td style="border-color:Silver;" class="smallFont">07/14/2005<br><br><span class="rNature">10.1103/PhysRevB.72.029901</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>China<br>Germany<br><span class="rPaywalled">Yes</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow">
+			<td class="hidden smallFont" style="color:Black;">8396</td><td id="grdRetraction_Title_10" title="8396" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$8396&#39;)" style="cursor:default;"><span class="rTitleNotIE">Influence of mobile dislocations on phase separation in binary alloys</span><br><span class="rSubject">(PHY) Materials Science; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Princeton Materials Institute and Department of Mechanical and Aerospace Engineering, Princeton University, Princeton, New Jersey 08544, USA</span><span class="rInstitution">
+Sandia National Laboratories, Livermore, California 94551, USA</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason" style="border-bottom-style: none;">+Error by Journal/Publisher</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Mikko Haataja</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">François Léonard</a></td><td style="border-color:Silver;" class="smallFont">02/18/2004<br>00000000<br><span class="rNature">10.1103/PhysRevB.69.081201</span></td><td style="border-color:Silver;" class="smallFont">02/27/2004<br>00000000<br><span class="rNature">10.1103/PhysRevB.69.069904</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Correction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>United States<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display: block;" title="Article published in wrong section of journal." class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow" style="background-color:White;">
+			<td class="hidden smallFont" style="color:Black;">8526</td><td id="grdRetraction_Title_11" title="8526" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$8526&#39;)" style="cursor:default;"><span class="rTitleNotIE">Itinerant electron metamagnetism in LaCo9Si4</span><br><span class="rSubject">(PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Institut für Festkörperphysik, T.U. Wien, Wiedner Hauptstrasse 8–10, A-1040 Wien, Austria</span><span class="rInstitution">
+Center for Computational Material Science, T.U. Wien, A-1040 Wien, Austria</span><span class="rInstitution">
+Institut für Mineralogie und Kristallographie, Universität Wien, A-1090 Wien, Austria</span><span class="rInstitution">
+Institut für Physikalische Chemie, Universität Wien, Währingerstrasse 42, A-1090 Wien, Austria</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason" style="border-bottom-style: none;">+Error by Journal/Publisher</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">H Michor</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">M El-Hagary</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">M Della Mea</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">M W Pieper</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">M Reissner</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">G Hilscher</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">S Khmelevskyi</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">P Mohn</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">G Schneider</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">G Giester</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">P Rogl</a></td><td style="border-color:Silver;" class="smallFont">02/18/2004<br>00000000<br><span class="rNature">10.1103/PhysRevB.69.081404</span></td><td style="border-color:Silver;" class="smallFont">02/27/2004<br>00000000<br><span class="rNature">10.1103/PhysRevB.69.069903</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Correction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>Austria<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display: block;" title="Article published in wrong section of journal." class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow">
+			<td class="hidden smallFont" style="color:Black;">8392</td><td id="grdRetraction_Title_12" title="8392" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$8392&#39;)" style="cursor:default;"><span class="rTitleNotIE">Effect of isotopic composition on the lattice parameter of germanium measured by x-ray backscattering</span><br><span class="rSubject">(PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Advanced Photon Source, Argonne National Laboratory, 9700 South Cass Avenue, Argonne, Illinois 60439</span><span class="rInstitution">
+University of Hamburg, Germany</span><span class="rInstitution">
+Hasylab, Hamburg, Germany</span><span class="rInstitution">
+University of California and Lawrence Berkeley Laboratory, Berkeley, California 94720</span><span class="rInstitution">
+Kurchatov Institute, Moscow, Russia</span><span class="rInstitution">
+Purdue University, Department of Physics, West Lafayette, Indiana 47907-1396</span><span class="rInstitution">
+Institut de Physique, Université de Liège, B-4000 Liège, Belgium</span><span class="rInstitution">
+Department of Physics, Santa Clara University, Santa Clara, California 94053</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason" style="border-bottom-style: none;">+Error in Image</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">M Y Hu</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">H Sinn</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">A Alatas</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">W Sturhahn</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">E E Alp</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">H C Wille</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Yu V Shvyd’ko</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">J P Sutter</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">J Bandaru</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">E E Haller</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">V I Ozhogin</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">S Rodriguez</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">R Colella</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">E Kartheuser</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">M A Villeret</a></td><td style="border-color:Silver;" class="smallFont">03/17/2003<br>00000000<br><span class="rNature">10.1103/PhysRevB.67.113306</span></td><td style="border-color:Silver;" class="smallFont">02/20/2004<br>00000000<br><span class="rNature">10.1103/PhysRevB.69.079902</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Correction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>Belgium<br>Germany<br>Russia<br>United States<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow" style="background-color:White;">
+			<td class="hidden smallFont" style="color:Black;">8527</td><td id="grdRetraction_Title_13" title="8527" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$8527&#39;)" style="cursor:default;"><span class="rTitleNotIE">Sublimated decoupling of the vortex lattice in extreme type-II layered superconductors</span><br><span class="rSubject">(PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Department of Physics and Astronomy, California State University, Los Angeles, California 90032</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason" style="border-bottom-style: none;">+Error in Analyses</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">J P Rodriguez</a></td><td style="border-color:Silver;" class="smallFont">12/06/2002<br><br><span class="rNature">10.1103/PhysRevB.66.214506</span></td><td style="border-color:Silver;" class="smallFont">02/20/2004<br><br><span class="rNature">10.1103/PhysRevB.69.069901</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Correction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>United States<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow">
+			<td class="hidden smallFont" style="color:Black;">8393</td><td id="grdRetraction_Title_14" title="8393" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$8393&#39;)" style="cursor:default;"><span class="rTitleNotIE">Equation of state of an anisotropic three-dimensional C 60 polymer: The most stable form of fullerene</span><br><span class="rSubject">(PHY) Materials Science; (PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">European Synchrotron Radiation Facility, Boîte Postale 220, F-38043 Grenoble Cedex, France</span><span class="rInstitution">
+Departamento de Fisíca, Universidade de Aveiro, 3800 Aveiro, Portugal</span><span class="rInstitution">
+Laboratoire de cristallographie, CNRS, Boîte Postale 166 Cedex 09, 38000 Grenoble, France</span><span class="rInstitution">
+Centre de Recherche sur les tres Basses Temperatures, CNRS, Boîte Postale 166 Cedex 09, 38000 Grenoble, France</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason" style="border-bottom-style: none;">+Error by Journal/Publisher</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">M Mezouar</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">L Marques</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">J L Hodeau</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">V Pischedda</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">M Núñez-Regueiro</a></td><td style="border-color:Silver;" class="smallFont">11/26/2003<br><br><span class="rNature">10.1103/PhysRevB.68.193414</span></td><td style="border-color:Silver;" class="smallFont">01/30/2004<br><br><span class="rNature">10.1103/PhysRevB.69.079901</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Correction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>France<br>Portugal<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display: block;" title="Misspelling of fourth author&#39;s last name." class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow" style="background-color:White;">
+			<td class="hidden smallFont" style="color:Black;">5397</td><td id="grdRetraction_Title_15" title="5397" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$5397&#39;)" style="cursor:default;"><span class="rTitleNotIE">Conjugation Length Dependence of the Charge Transport in Oligothiophene Single Crystals</span><br><span class="rSubject">(PHY) Chemistry; (PHY) Engineering - Electrical; (PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Bell Laboratories, Lucent Technologies, 600 Mountain Avenue, Murray Hill, New Jersey, USA</span><span class="rInstitution">
+CEA-Saclay, Service de Physique et Chimie des Surfaces et Interfaces, DRECAM/DSM, 91191 Gif-sur-Yvette, France</span><span class="rInstitution">
+Universite´ Pierre et Marie Curie, UMR 7611, 4 place Jussieu, 75005 Paris, France</span><span class="rInstitution">
+Solid State Physics Laboratory, ETH Ho¨nggerberg, CH-8093 Zu¨rich, Switzerland</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Falsification/Fabrication of Data</div><div class="rReason">+Investigation by Company/Institution</div><div class="rReason">+Miscommunication by Author</div><div class="rReason">+Unreliable Data</div><div class="rReason" style="border-bottom-style: none;">+Unreliable Results</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Jan Hendrik Schon</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Christian Kloc</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">D Fichou</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Bertram Batlogg</a></td><td style="border-color:Silver;" class="smallFont">06/27/2001<br><br><span class="rNature">10.1103/PhysRevB.66.249906</span></td><td style="border-color:Silver;" class="smallFont">12/23/2002<br><br><span class="rNature">10.1103/PhysRevB.66.249906</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>France<br>Switzerland<br>United States<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow">
+			<td class="hidden smallFont" style="color:Black;">5400</td><td id="grdRetraction_Title_16" title="5400" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$5400&#39;)" style="cursor:default;"><span class="rTitleNotIE">Low-temperature Transport in High-mobility Polycrystalline Pentacene Field-effect Transistors</span><br><span class="rSubject">(PHY) Engineering - Electrical; (PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Bell Laboratories, Lucent Technologies, 600 Mountain Avenue, Murray Hill, New Jersey, USA</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Falsification/Fabrication of Data</div><div class="rReason">+Investigation by Company/Institution</div><div class="rReason">+Misconduct by Author</div><div class="rReason">+Unreliable Data</div><div class="rReason" style="border-bottom-style: none;">+Unreliable Results</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Jan Hendrik Schon</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Christian Kloc</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Bertram Batlogg</a></td><td style="border-color:Silver;" class="smallFont">03/06/2001<br><br><span class="rNature">10.1103/PhysRevB.63.125304</span></td><td style="border-color:Silver;" class="smallFont">12/23/2002<br><br><span class="rNature">10.1103/PhysRevB.66.249907</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>United States<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow" style="background-color:White;">
+			<td class="hidden smallFont" style="color:Black;">5401</td><td id="grdRetraction_Title_17" title="5401" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$5401&#39;)" style="cursor:default;"><span class="rTitleNotIE">Mobile Iodine Dopants in Organic Semiconductors</span><br><span class="rSubject">(PHY) Engineering - Electrical; (PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Bell Laboratories, Lucent Technologies, 600 Mountain Avenue, P.O. Box 636, Murray Hill, New Jersey, USA</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Falsification/Fabrication of Data</div><div class="rReason">+Investigation by Company/Institution</div><div class="rReason">+Misconduct by Author</div><div class="rReason">+Unreliable Data</div><div class="rReason" style="border-bottom-style: none;">+Unreliable Results</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Jan Hendrik Schön</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Christian Kloc</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Bertram Batlogg</a></td><td style="border-color:Silver;" class="smallFont">04/12/2000<br><br><span class="rNature">10.1103/PhysRevB.61.10803</span></td><td style="border-color:Silver;" class="smallFont">12/23/2002<br><br><span class="rNature">10.1103/PhysRevB.66.249905</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>United States<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow">
+			<td class="hidden smallFont" style="color:Black;">5399</td><td id="grdRetraction_Title_18" title="5399" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$5399&#39;)" style="cursor:default;"><span class="rTitleNotIE">Hole Transport in Pentacene Single Crystals</span><br><span class="rSubject">(PHY) Engineering - Electrical; (PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review B ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Bell Laboratories, Lucent Technologies, Murray Hill, New Jersey, USA</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Falsification/Fabrication of Data</div><div class="rReason">+Investigation by Company/Institution</div><div class="rReason">+Misconduct by Author</div><div class="rReason">+Unreliable Data</div><div class="rReason" style="border-bottom-style: none;">+Unreliable Results</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Jan Hendrik Schon</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Christian Kloc</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Bertram Batlogg</a></td><td style="border-color:Silver;" class="smallFont">05/12/2001<br><br><span class="rNature">10.1103/PhysRevB.66.249903</span></td><td style="border-color:Silver;" class="smallFont">12/20/2002<br><br><span class="rNature">10.1103/PhysRevB.66.249903</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>United States<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review B_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review B_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr>
+	</tbody></table>
+</div>
+            </span>
+        </div>
+        <select id="lstCountry" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchCountry&#39;));" class="lstBox" attrcode="SCO"></select>
+        
+        <select id="lstAuthor" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchAuthor&#39;));" class="lstBox" attrcode="AUT"></select>
+        
+        <select id="lstJournal" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchJournal&#39;));" class="lstBox" attrcode="SJO"></select>
+        
+        <select id="lstPublisher" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchPublisher&#39;));" class="lstBox" attrcode="SPU"></select>
+        
+        <select id="lstSubject" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchSubject&#39;));" class="lstBox" attrcode="SSU"></select>
+        
+        <select id="lstSubjectGroup" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchSubject&#39;));" class="lstBox" attrcode="SGR"></select>
+        
+        <select id="lstReason" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchReason&#39;));" class="lstBox" attrcode="SRE"></select>
+        
+        
+        <select id="lstType" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchType&#39;));" class="lstBox" attrcode="STY"></select>
+    </div>
+    
+<script>window.location.hash = '?jou%3dPhysical%2bReview%2bB';</script>
+<script type="text/javascript">
+//<![CDATA[
+WebForm_AutoFocus('txtSrchTitle');//]]>
+</script>
+</form>
+    
+
+<script src="./Physical Review B_files/index.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //alert('loaded');
+        //    if (!$.browser.safari)
+        //        initEdit();
+        imageLoaded();
+        initLogin();
+        if (($('#btnSave').is(":visible") && isIE) || $('#btnSave').css('display') !== 'none')
+            $('tr').removeClass('hidden');
+        try {
+            doScroll();
+        }
+        catch (err) {
+        }
+        //imageLoaded();
+        
+    });
+    //$(window).load(function () {
+    //    //alert("window load occurred!");
+    //    imageLoaded();
+    //    //alert($('#btnSearch').css('background-image'));
+    //    //toggleSpinner();
+    //    //$('#divContent')
+    //    //    .show();
+    //});
+</script>
+
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none; font-size: 0.9em;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-2" tabindex="0" style="display: none; font-size: 0.9em;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-3" tabindex="0" style="display: none; font-size: 0.9em;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span></body></html>

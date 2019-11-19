@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)http://retractiondatabase.org/RetractionSearch.aspx#?jou%3dPhysical%2bReview%2bA -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Retraction Watch Database
+</title><link rel="stylesheet" href="./Physical Review A_files/style.css"><link rel="stylesheet" href="./Physical Review A_files/jquery-ui.css"><link href="./Physical Review A_files/Main.css" type="text/css" rel="StyleSheet"><script src="./Physical Review A_files/jquery-1.11.3.min.js" type="text/javascript"></script><script src="./Physical Review A_files/jquery-ui.min.js" type="text/javascript"></script><script src="./Physical Review A_files/Main.js" type="text/javascript"></script><script src="./Physical Review A_files/Search.js" type="text/javascript"></script><script src="./Physical Review A_files/Login.js" type="text/javascript"></script><script type="text/javascript">
+         var autocompleteActivated = false;
+         $(function () {
+             //AttributeAutoComplete($('#txtSrchJournal'), '/RetractionEdit.aspx/FetchJournalNames');
+             //AttributeAutoComplete($('#txtSrchTitle'), '/RetractionEdit.aspx/FetchJournalNames');
+             $('#tblSearch [autoHint]').each(function () {
+                 AttributeAutoComplete($('#' + $(this).attr('id')), '/RetractionEdit.aspx/FetchJournalNames');
+             });
+             
+         });
+         function pageLoad() {
+             initPageRequestManager();
+         }
+         function initPageRequestManager() {
+             var prmInstance = Sys.WebForms.PageRequestManager.getInstance();
+             prmInstance.add_endRequest(function () {
+                 //re-bind jquery events         
+                 $('#tblSearch [autoHint]').each(function () {
+                     AttributeAutoComplete($('#' + $(this).attr('id')), '/RetractionEdit.aspx/FetchJournalNames');
+                 });
+             });
+         }
+         function getLoadListURL() {
+             return '/RetractionSearch.aspx/FetchSearchValues';
+         }
+    </script></head>
+
+
+    
+    
+    
+    
+    
+    
+     
+<body>
+    
+    <form method="post" action="http://retractiondatabase.org/RetractionSearch.aspx" id="frmRetractionSearch">
+<div class="aspNetHidden">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="wXQUe/GvPZb+UZIkqFs0qvjNT83rB9fDjwA9+Yj4RJHy+n0umPs4FN16eoggeK8cd1dCLSraZps3y5VB2ePBAtS9MjkjKPMlD2sIQCmXqwSwCaPKIULfYExbN32Oxb7nETxXL2f9UJBrfc+xx8IWk5EPJrU6v4hmlrQbafdPboZGzruyb4BtCbKrpZ86vrlsVXW6xlpUSx2STmNOC33a1DtrqbjNAQ2aLrGHlhNOTU3jHpAoAsLOe3MQKfsUtK7+lXDGusc5t8Je7jYSw+c/Xc9JVSnxzaR6rfPwKSpm2Q5tnJ17n3hCFaE4UFJ56mOquTwRcpjC/liEijsnA2jIPbldQPH3iEoIRhXE61bMiJiWmA9lh7UlOYDFmmbVOy2NG8bY91tSU8P6AV9LhxC9BeL5fVCkCc4eI9G8KDgp6vc+n/fIyJaDxPQjXTBZeILKAAqLhWOG8N0jZQfkV37ka5CZZ+FcI5XbMFKxqhgYyq33do9LakfbhtjGfBQbwT/xZhgir+ag8crqM5STebQb4I5hjQZuTOceXX4thAveW1N7f9B0HdmcsgfP0y9hR481FWvb+VYb8ejPomfyPgtXEP/2WCMHwyb3lO1Lee0PsLUK0oQ4x52J+AgShPQxkA2FM5Bz6sK3vl9yfkiSl6gdxB4qqQ+mu3lXiDufra2f9nPFrYdxybS6qHxpQu2pCR70iCX4krRicHrYEF8RPNdC/VFvwUldT+ALZ9dbBo2d8VPLiWT2vYVz56aJVdib/3w2CHl9tSid2de9eB9M/SfKmkkndUiDpFIWFMGe106URB7IuYumlbLuq5eRYLoC0tiYW/AEhBX0FmurOs1F0qlKbLX81DuUL3U40YDEF4eJpMlqVsS8WILAbpF5zFf1VyBQwm6HYlW4+P9zzl1Y3vXGMrF3RgIbscBdJUAwznLPlbKdyfkW3NGYiJXXNUxU1yqOhqF82tCdOkNuVKRyFB4eKVuRblzCQb5EbQXuqVHmfDExq/MYWwlG06xsdGUCE+LZzlMj6sLSnoLnRV7I1fYdjox0F0R9qAKBVJfU/0PPwFG4GspYB50ZgH62TKvQZpB2CPQjkXxIq40a3JxpoCFgXCWwQ35xIlDu0n8j+DNYhScGkYX+kw6Uk9yas0oI18L7M6BoxAC4o+STSfvFZ7QlqkzDjnG9OBr/T/6Ae7FuCJ/9qyTxDzr8/GCpa/v37tN2ap5dkOgzzMZDFFW9uQ6lt/SGWzJnf1+OzRmKnWfeXBbZjotaq5L64od4feKVZDTKzb6okUfQyE8qauo82DyePQOyVjVT3d2B64L8E20NaUGCKKN1n7+ostRZWEoBECcGg5tL2jlc3cq975A6qvN+vmXqjTZ/50ELTR1wxWoGn1G+ujZzVQRETmttwKsQMocNLbFEkpBhjm2+PjX+CqluHYfP2YkrDY9SfeEiogtf4HndEZPwxB3o1H4Gh1U6UJy/3Uk1kqLVjOFHB422ycFa5Ca4aGPdxzqZH7ss7XlxK4Z4DHYNx+lvQ0hk4T2F3fo860U9sDBhaOkc2r/0tWKe1EEXWWENXPgtyeOM/0ICa0bApXsX8knPHCLJNMXZiCfvUj37Oj/sm4PgXmRr3mDIYnnsp9172RVAoSNT0HxqYXyzBim/CTfyvl620IaGhtYA8Jyoih9hXz3e7BoXh9QaGGjQ5uIBETigphav8y6eS8RE9C/tixcaekUVTR+V6+5Kby9sJ9d5CdzAGZ+m6f7epop3uCd9Dtv9gyy8bYlfWQEALbEhCemyeeFpJJd7Wq/ailgzBcCfxATBSxIgI7KsESFqqmlAgnU2sHIlnfZh1GaFwtYWgJr+XkcR8qxuEdJwMVglq1BE/o+RyMTT6gnYrtC7e9sVXGdQ4YMj0hXFdC7kqh0AMMkvNKYvzt/E1tGueuz7HtRluBRceYgz+BgqfOGiAwmkVvPQES3gEddtPr/t06j2ERGp9WITrO6ISyZrlAySPA==">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['frmRetractionSearch'];
+if (!theForm) {
+    theForm = document.frmRetractionSearch;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./Physical Review A_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./Physical Review A_files/WebResource(1).axd" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F1918523">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="KYiKCqfiKa+pH+31kzMWf4iDbtpJsv8R9xPIyC/+sddigmFd1H5tU9Q8lLEE4IVFx1pkbOwWjNkB3QlgIgmgw+TtvGs7Me5F2DS0Eu5wR5lPKbGXRs3bEpo2QdL8Y4buNN42VXcunScJ+lJtIWt3f7vpp1HNAsTfK5LD1AlOO0sAj7b5KqPqZnSzsJXTQayIEyPlAV7TAeP1jOre/GG+uQp06JaUjRPbQnGeWU4B6A1NY6vQvIueBQN6JZV1ighEEJM5IV6Bfnmn6QIFGnpE6vCn9kIthPWi794d9KejyDRu6JKodm5sDLQbZ5k9NJ8PDPJ0BG+A8maoBO3rJfLKGRyPRJ/bXrbhCnDPNKTJnhgQe8kPHXaGCHUj+cyyk92GwM0nlDoaUL0Y08TvdfQ0GV0p0lD9e2sPvI3EVISDRDykjcb0nwpsyRnV9zsts0YiDIOhp92mvH/qG6FvvrT480NMu5yJklOptWv+rNLBGxRX2PcjFBaZB+opM1Y6XRhfPNbEr52x6c1qU5uU4QLa7NuZaiwpcto4BqBh5pr7ZSMHRPhWn7r6ap8KcfE0S0/Eu8DlTJArgGo56rnS7pKv+QBFp8jlR3WPT8ApuTh0EDLk/z4yjQMeii1r7j13HBMCIRwo3ASJIUcoomLcUkpWCxnVQX2E5+AHqE88qP81U7/CKMWtmB5QeZU97NTMPsA4C/qmn7hfpViwXpETwS+Eze5mn1d9q+rkN+TkwepnxdzVf8BqNkvRY9JDra37lZvXsbOKs0BITaXvVV/pB3xlm4q70IzYHkKW61Lq4Lmxo9ucRd8sbr52+droHI7/eZ+4R8jEGlXs1Ws59FVh84m7p0IZxJoiz0UvqU8WasjJ3xDxCBJpCzxYwnyl72UN4qBPvYEkBfgwo/0m0ITI4Igk39qvdhhJ0Poj2dW7/X89UVxndhugv6POMA6wp0knlvpaLh0fF4fCajiwreMWdNuKexM7+kftXSHoKdXXm9BVogmIsiPz5CHFRN9cT1XbmHc065ujEgw1uMIig4cxJh4/x5QWpyF0lkhhd9vef9ThyQq07l6TCY4liQFOxqsRWHf+9fS8/yCbcVJxNQJz35nsPoO6p9iClF09jOn3Di6FoOJcpS+XPH35SqI0VReo9FlPrx4zbCu6oQptqFM5GwWLzECxGZBCASLvMTy9SClcnqWpZPmhQvEq0liE0MJ57lMYnxoTE7kNPBqLVs9ouws2/ESebg89hONx9YsxHl0ne/qo55Wk+f7C46bIQOH7TGOTXJC5aoly0HohaQZeduh4AdBwhD0ROWYZPbq4VREpsdCdhh4TTUfBU7BCwpz9aVokvNrqfX1KkcAc/rKJCKNcGF46yL0rb2bCbi4Om3ka4Vn2NDyuSzE+v/XyIWcHZcoNOjYccJrXvi1ZG9xfRagk1aMWvvsEot71cZOyLdn/pxX4/Z4Pe4sqdYvCv9OC4BBQvvmTqAraXc7KRY//y9gf3E7cIub61EsvNV2k11uV7nvVQLQSVGxjqoV46tIJc3N8Fayl8g==">
+</div>
+    <div id="divTitle" class="" style="width: 78%;">
+        <div style="width:4%;display:inline-block">
+            <h2 class="smallFont"><a href="http://www.retractionwatch.com/" id="lnkHelp" style="float:right;display:none;" target="_blank">Help</a></h2>
+        </div>
+          <div id="wrap" style="float:right">
+            <div id="regbar">
+                <div id="navthing">
+                    <h2 class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" id="loginform">Login</a>
+                        <a id="logoutform" style="display:none" href="javascript:__doPostBack(&#39;logoutform&#39;,&#39;&#39;)">Logout</a>
+                        <a id="hrefAdmin" href="javascript:goToAdmin();" style="margin-left:20px;display:none;">Admin</a>
+                          <a id="hrefDownload" style="margin-left:20px;display:none" onclick="return(downloadWarning());" href="javascript:__doPostBack(&#39;hrefDownload&#39;,&#39;&#39;)">Download</a>
+                    </h2>    
+                    <div class="login">
+                        <div class="arrow-up"></div>
+                        <div class="formholder"> 
+                            <div id="loginDiv" class="randompad">
+                                <fieldset>
+                                    <label name="email" for="txtEmail" style="float:left;">Email</label>
+                                    
+                                    <input name="txtEmail" type="email" id="txtEmail" required="required" oninvalid="this.setCustomValidity(&#39;Please enter an email address&#39;)" oninput="this.setCustomValidity(&#39;&#39;)">
+                                    
+                                    <label name="password" style="float:left;" for="txtPSWD">Password</label>
+                                    <input name="txtPSWD" type="password" id="txtPSWD" required="required" oninvalid="this.setCustomValidity(&#39;Please enter a password&#39;)" oninput="this.setCustomValidity(&#39;&#39;)">
+                                    <input name="btnLogin" type="submit" id="btnLogin" value="Login">
+ 
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              
+        </div>
+        <table width="100%">
+            <tbody><tr>
+                <td class="logo smallFont" style="color:darkblue;">
+                    <p style="float:right"><span>Version: </span><span id="lblVersionNo" style="font-size: 12px; font-weight: bold;">1.0.5.5</span></p> 
+                 </td>
+            </tr>
+        </tbody></table>
+    </div>
+   <div id="divContent" style="width: 100%; margin-top: -40px;" class="searchBox">
+    <div>
+    <table id="tblSearch" style="width:80%;margin:0 auto;" class="smallFont">
+        <tbody><tr>
+            <th colspan="2">
+                
+                The Retraction Watch Database<br>
+                <input type="button" name="btnRetractionAdd" value="" onclick="_spFormOnSubmitCalled = false; _spSuppressFormOnSubmitWrapper=true;__doPostBack(&#39;btnRetractionAdd&#39;,&#39;&#39;)" id="btnRetractionAdd" title="Add Notice" style="border-width:0px;height:36px;width:70px;margin-top:-12px;margin-right:4px;margin-bottom:4px; display:none;float:right;background-image:url(&#39;Images/BtnAdd.png&#39;);">
+                
+                 <span id="lblMessage">Please see this <a style="color:darkblue" href="https://retractionwatch.com/retraction-watch-database-user-guide/">user guide</a> before you get started</span>
+            </th>
+        </tr>
+        
+        <tr>
+            <td style="width:68%" class="smallFont">
+                <table>
+                <tbody><tr class="searchLeft HeadText HeadMini">
+                     <td class="smallFont">
+                        <span id="lblAuthor" title="Type or select from list and press Search button" sqlparm="Author">Author(s):</span>
+                    </td>
+                    <td style="white-space:nowrap" class="smallFont">
+                        <input name="txtSrchAuthor" type="text" id="txtSrchAuthor" placeholder="Type to search" autohint="" attrcode="SAU" searchtype="Expert" bool="Y" sqlparm="Author" onfocus="this.CursorPosition = this.value.length;" onblur="$(&#39;#lstAuthor&#39;).hide();nextSearch=&#39;Expert&#39;;" style="width:90%;" class="ui-autocomplete-input" autocomplete="off" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgAuthor" src="./Physical Review A_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstAuthor&#39;));" alt="Drop">  
+                    </td>
+                     <td style="width:10%" class="smallFont">
+                        <span id="lblCoutry" title="Type or select from list and press Seach button" sqlparm="Country">Country(s):</span>
+                    </td>
+                    <td style="white-space:nowrap" class="smallFont">
+                        <input name="txtSrchCountry" type="text" id="txtSrchCountry" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" onblur="$(&#39;#lstCountry&#39;).hide();nextSearch=&#39;Expert&#39;;" style="width:88%;" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgCountry" src="./Physical Review A_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstCountry&#39;));" alt="Drop">  
+                    </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                     <td class="smallFont">
+                        <span id="lblTitle" title="Enter search Title and press Search button" sqlparm="Title">Title:</span>
+                    </td>
+                    <td colspan="3" style="width:100%" class="smallFont">
+                             <input name="txtSrchTitle" type="text" id="txtSrchTitle" attrcode="STL" autohint="" keepperiod="Y" placeholder="Type to search" onfocus="this.CursorPosition = this.value.length;" searchtype="Expert" bool="Y" class="ui-autocomplete-input" autocomplete="off" title="Use AND / OR / AND NOT operators for boolean search">
+                    </td>
+                </tr> 
+                <tr class="searchLeft HeadText HeadMini">
+                    <td class="smallFont">
+                    <span id="lblSrchReason" title="Type or select from list and press Search button" sqlparm="Reason">Reason(s) for Retraction:</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                    <input name="txtSrchReason" type="text" id="txtSrchReason" attrcode="SRE" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" sqlparm="Reason" onblur="$(&#39;#lstReason&#39;).hide();nextSearch=&#39;Expert&#39;;" title="Use AND / OR / AND NOT operators for boolean search">
+                    <img id="img2" src="./Physical Review A_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstReason&#39;));" alt="Drop">     
+                    </td>
+                </tr>   
+                <tr class="searchLeft HeadText HeadMini">
+                 <td class="smallFont">
+                    <span id="lblSubject" title="Type or select from list and press Search button" sqlparm="Subject">Subject(s):</span>
+                    </td>
+                    <td style="white-space:nowrap" class="smallFont">
+                        <input name="txtSrchSubject" type="text" id="txtSrchSubject" attrcode="SSU" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" onblur="$(&#39;#lstSubject&#39;).hide();nextSearch=&#39;Expert&#39;;" style="width:90%;" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgSubject" src="./Physical Review A_files/downArrow.png" class="btnImage" title="Search All Subjects" onclick="dropDownClick($(this).prev(),$(&#39;#lstSubject&#39;));" alt="Drop"> 
+                        <img id="imgSubjectGroup" style="margin-left:-5px" title="Search by Subject Groups" src="./Physical Review A_files/group.png" class="btnImage" onclick="dropDownClick($(this).closest(&#39;td&#39;).find(&#39;input&#39;),$(&#39;#lstSubjectGroup&#39;));" alt="Drop">        
+                        
+                    </td>
+                    <td class="smallFont">
+                    <span id="lblType" title="Type or select from list and press Search button" sqlparm="ArticleType">Article<br>Type(s):</span>
+                    </td>
+                    <td style="white-space:nowrap" class="smallFont">
+                        <input name="txtSrchType" type="text" id="txtSrchType" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" onblur="$(&#39;#lstType&#39;).hide();nextSearch=&#39;Expert&#39;;" style="width:88%;" title="Use AND / OR / AND NOT operators for boolean search">
+                    <img id="imgType" src="./Physical Review A_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).closest(&#39;td&#39;).find(&#39;input&#39;),$(&#39;#lstType&#39;));" alt="Drop">     
+                    </td>
+                </tr>   
+                <tr class="searchLeft HeadText HeadMini">
+                    <td class="smallFont">
+                        <span id="lblSrchJournal" title="Type or select from list and press Search button" sqlparm="Journal">Journal:</span>
+                     </td>
+                     <td colspan="3" class="smallFont">
+                        
+                         <input name="txtSrchJournal" type="text" value="Physical Review A" id="txtSrchJournal" autohint="" attrcode="SJO" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" sqlparm="Journal" onblur="$(&#39;#lstJournal&#39;).hide();nextSearch=&#39;Expert&#39;;" class="ui-autocomplete-input" autocomplete="off" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgDroplstJournal" src="./Physical Review A_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstJournal&#39;));" alt="Drop">     
+                     </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                    <td class="smallFont">
+                        <span id="lblPublisher" sqlparm="Publisher">Publisher:</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                       
+                        <input name="txtSrchPublisher" type="text" id="txtSrchPublisher" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" sqlparm="Publisher" onblur="$(&#39;#lstPublisher&#39;).hide();nextSearch=&#39;Expert&#39;;" title="Use AND / OR / AND NOT operators for boolean search">
+                        <img id="imgPublisher" src="./Physical Review A_files/downArrow.png" class="btnImage" onclick="dropDownClick($(this).prev(),$(&#39;#lstPublisher&#39;));" alt="Drop">     
+                    </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                    <td class="smallFont">
+                        <span id="lblAffiliation" sqlparm="Institution">Affiliation(s):</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                       <input name="txtSrchInstitution" type="text" id="txtSrchInstitution" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" title="Use AND / OR / AND NOT operators for boolean search">   
+                    </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                     <td class="smallFont">
+                        <span id="lblNotes" title="Enter search Notes and press Search button">Notes:</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                        <input name="txtSrchNotes" type="text" id="txtSrchNotes" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" title="Use AND / OR / AND NOT operators for boolean search">
+                    </td>
+                    <td colspan="2" class="hideWrite smallFont">
+                        <img id="imgAdminNotes" border="0" title="Admin Notes" src="./Physical Review A_files/NotesAdmin.png" alt="Notes" class="NotesAdmin logo" height="20px" style="cursor: default;">
+                        <input name="txtSrchAdminNotes" type="text" id="txtSrchAdminNotes" searchtype="Expert" bool="Y" onfocus="this.CursorPosition = this.value.length;" style="width:86%;" title="Use AND / OR / AND NOT operators for boolean search">
+                    </td>
+                </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                     <td class="smallFont">
+                        <span id="lblSrchURL" title="Enter search URL and press Search button" sqlparm="URL">URL:</span>
+                    </td>
+                    <td colspan="3" class="smallFont">
+                        <input name="txtSrchURL" type="text" id="txtSrchURL" searchtype="Expert" onfocus="this.CursorPosition = this.value.length;">
+                    </td>
+                </tr>
+                </tbody></table>
+            </td>
+            <td style="vertical-align:top" class="smallFont">
+                <table cellspacing="0">
+                    <tbody><tr>
+                        <td class="searchRight HeadText HeadMini smallFont" colspan="4" style="text-align:center">
+                            <span style="margin-top:-4px">Original Paper</span>
+                        </td>
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini">
+                        <td class="hasTopBorder hasLeftBorder smallFont">
+                            <span id="lblOriginalDateFrom" sqlparm="OriginalPaperFromDate">From Date:</span>
+                        </td>
+                        <td class="hasTopBorder rDates smallFont">
+                            <input name="txtOriginalDateFrom" type="text" maxlength="10" id="txtOriginalDateFrom" class="dateField" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;return(validateDate(this));">
+                            
+                        </td>
+                        <td class="hasTopBorder smallFont">
+                            <span id="lblOriginalDateTo" sqlparm="OriginalPaperToDate">To:</span>
+                        </td>
+                        <td class="hasTopBorder hasRightBorder rDates smallFont">
+                            <input name="txtOriginalDateTo" type="text" maxlength="10" id="txtOriginalDateTo" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;if (validateDate(this)) dateCompare($(&#39;#txtOriginalDateFrom&#39;)[0], this);">
+                            
+                        </td>
+                       
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder smallFont">
+                            <span id="lblOriginalPubMedID" sqlparm="OriginalPaperPubMedID">PubMedID:</span>
+                        </td>
+                        <td class="rPubMed smallFont">
+                            <input name="txtOriginalPubMedID" type="text" maxlength="8" id="txtOriginalPubMedID" class="clNumber" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;">
+                        </td>
+                        <td class="smallFont">
+
+                        </td>
+                        <td colspan="1" class="hasRightBorder smallFont">
+                            <span class="timeStamp" style="float:left">mm/dd/yyyy</span>
+                        </td>
+                    </tr>
+                     <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder hasBottomBorder smallFont">
+                            <span id="lblOriginalDOI" sqlparm="OriginalPaperDOI">DOI:</span>
+                        </td>
+                        <td class="hasRightBorder hasBottomBorder smallFont" colspan="3">
+                            <input name="txtOriginalDOI" type="text" maxlength="100" id="txtOriginalDOI" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" class="searchRight HeadText HeadMini smallFont" style="text-align:center">
+                            <span id="lblRetracHead">Retraction or Other Notices</span>
+                        </td>
+                    </tr>
+                     <tr class="searchRight HeadText HeadMini">
+                        <td class="hasTopBorder hasLeftBorder smallFont">
+                            <span id="lblFromDate" sqlparm="RetractionFromDate">From Date:</span>
+                        </td>
+                        <td class="hasTopBorder rDates smallFont">
+                            <input name="txtFromDate" type="text" maxlength="10" id="txtFromDate" class="dateField" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;validateDate(this);">
+                            
+                        </td>
+                        <td class="hasTopBorder smallFont">
+                            <span id="lblToDate" sqlparm="RetractionToDate">To:</span>
+                        </td>
+                        <td class="hasTopBorder hasRightBorder rDates smallFont">
+                            <input name="txtToDate" type="text" maxlength="10" id="txtToDate" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;if (validateDate(this)) dateCompare($(&#39;#txtFromDate&#39;)[0], this);">
+                        </td>
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder smallFont">
+                            <span id="lblPubMedID" sqlparm="RetractionPubMedID">PubMedID:</span>
+                        </td>
+                        <td class="rPubMed smallFont"> 
+                            <input name="txtPubMedID" type="text" maxlength="8" id="txtPubMedID" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;" class="clNumber">
+                        </td>
+                        <td class="smallFont">
+                        </td>
+                         <td class="hasRightBorder smallFont" style="">
+                             <span class="timeStamp" style="float:left">mm/dd/yyyy</span>
+                             
+                         </td>
+                    </tr>
+                     <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder smallFont">
+                            <span id="lblDOI" sqlparm="RetractionDOI">DOI:</span>
+                        </td>
+                        <td class="hasRightBorder smallFont" colspan="3">
+                            <input name="txtDOI" type="text" maxlength="100" id="txtDOI" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;">
+                        </td>
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini">
+                        <td class="hasLeftBorder hasBottomBorder smallFont">
+                            <span id="lblNotice" sqlparm="RetractionNature">Nature of Notice:</span>
+                        </td>
+                        <td class="hasBottomBorder smallFont" colspan="1">
+                            <select name="drpNature" id="drpNature" searchtype="Expert" style="width:95%;">
+	<option selected="selected" value=""></option>
+	<option value="Retraction">Retraction</option>
+	<option value="Expression of concern">Expression of Concern</option>
+	<option value="Correction">Correction</option>
+
+</select>
+                        </td>
+                        <td class="hasBottomBorder smallFont">
+                            <span id="lblPaywalled" sqlparm="Paywalled">Paywalled:</span>
+                        </td>
+                        <td class="hasRightBorder hasBottomBorder smallFont">
+                            <select name="drpSrchPaywalled" id="drpSrchPaywalled" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;" style="width:89%;">
+	<option selected="selected" value=""></option>
+	<option value="Y">Yes</option>
+	<option value="N">No</option>
+	<option value="U">Unknown</option>
+
+</select>
+                        </td>
+                    </tr>
+                    <tr class="searchRight HeadText HeadMini hideAdmin">
+                        <td class="smallFont">
+                            <span id="lblUser">Created By User:</span>
+                        </td>
+                        <td class="smallFont">
+                            <select name="drpUser" id="drpUser" attrcode="SUS" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;" style="width:95%;">
+	<option selected="selected" value=""></option>
+	<option value="2">aabritis@gmail.com</option>
+	<option value="502">allysonalisha@gmail.com</option>
+	<option value="503">ashley.morrison@austin.utexas.edu</option>
+	<option value="504">bavrumov@hotmail.com</option>
+	<option value="505">dilinikumaratunga@gmail.com</option>
+	<option value="506">fredbeldin@gmail.com</option>
+	<option value="507">jim.eakins@gmail.com</option>
+	<option value="508">jon.jeffryes@gmail.com</option>
+	<option value="509">marissa.shieh@gmail.com</option>
+	<option value="510">mehlibrarian@gmail.com</option>
+	<option value="511">michael.e.koziol@gmail.com</option>
+	<option value="512">mjk4219@gmail.com</option>
+	<option value="513">NA</option>
+	<option value="514">nicole.wetsman@gmail.com</option>
+	<option value="515">pmccall@rollins.edu</option>
+	<option value="516">renata.massion@gmail.com</option>
+	<option value="517">rheaphine@gmail.com</option>
+	<option value="518">rkumaratunga@gmail.com</option>
+	<option value="519">rrinaldi@mail.usf.edu</option>
+	<option value="520">rsinn@jhu.edu</option>
+	<option value="521">s.heidij@gmail.com</option>
+	<option value="522">sparksjo92@gmail.com</option>
+
+</select>
+                            
+                        </td>
+                        <td class="rDates smallFont">
+                            <input name="txtCreateFromDate" type="text" maxlength="10" id="txtCreateFromDate" class="dateField" placeholder="mm/dd/yyyy" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;validateDate(this);">
+                        </td>
+                        <td class="rDates smallFont">
+                            <input name="txtCreateToDate" type="text" maxlength="10" id="txtCreateToDate" class="dateField" placeholder="mm/dd/yyyy" searchtype="Expert" onblur="nextSearch=&#39;Expert&#39;;validateDate(this);">
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+            </tr>
+                <tr class="searchLeft HeadText HeadMini">
+                   <td class="smallFont">
+                    <input type="button" name="btnSearch" value="" onclick="if (checkSearchRequest(this)){_spFormOnSubmitCalled = false; _spSuppressFormOnSubmitWrapper=true;}else return false;__doPostBack(&#39;btnSearch&#39;,&#39;&#39;)" id="btnSearch" searchtype="Expert" style="border-width:0px;border-style:None;height:36px;width:70px;background-image:url(&#39;Images/BtnSearch.png&#39;);float:right;" title="Select search criteria and click to start search ">
+                       <a id="hlinkClear" title="Clear Search" onclick="clearSearch(&#39;Expert&#39;); $(&#39;#hidClearSearch&#39;).val(&#39;Y&#39;);return false;" style="color:darkblue;float:left;
+                                        font-size:14px;text-decoration: underline;">Clear Search</a>
+                        <div class="spinner" style="float:right;margin-right:200px;width:4%;">
+                           <img id="imgSpinner" src="./Physical Review A_files/spinner.gif" style="display:none;float:right;" alt="Please wait..."> 
+                        </div>
+                    </td>
+                     <td align="right" class="smallFont">
+                         
+
+                         
+                     </td>
+                </tr>
+                     <tr class="searchLeft HeadText HeadMini smallFont">
+                     <td class="error smallFont">
+                        <span id="lblAppName" clearctl="Y" style="color:Yellow;background-color:Transparent;font-family:Verdana;font-size:13px;font-weight:bold;color: MidnightBlue;"></span>
+                         <span id="lblError" clearctl="Y" style="display:inline-block;color:Red;background-color:Yellow;border-color:Blue;border-width:1px;border-style:Solid;text-align:center;display:none;"></span> 
+                       </td>  
+                       <td colspan="2" style="text-align:center;" class="smallFont">
+
+                           <span id="lblDateError" clearctl="Y" style="display:inline-block;color:Red;background-color:Yellow;border-color:Blue;border-width:1px;border-style:Solid;text-align:center;display:none;"></span>  
+                     </td>
+                 </tr>
+            </tbody></table>
+    </div>
+    <input type="hidden" name="hidClearSearch" id="hidClearSearch">
+    <input type="hidden" name="hidSqlParmNames" id="hidSqlParmNames" value="Journal;Journal;Journal;Journal;Journal;">
+    <input type="hidden" name="hidEmptySqlParmNames" id="hidEmptySqlParmNames">
+   <div id="divGridRetraction" style="margin:0 auto;display:table">
+        <span id="ScrollGrid" style="OVERFLOW: auto; background-color: whitesmoke;">
+                    <div>
+	<table cellspacing="0" cellpadding="2" rules="all" clearctl="Y" id="grdRetraction" style="background-color:WhiteSmoke;border-color:Gray;border-width:1px;border-style:Solid;font-family:Times New Roman;height:8px;border-collapse:collapse;overflow: auto" class="smallFont">
+		<tbody><tr>
+			<th class="hidden smallFont" scope="col">RID</th><th class="header headerSortUp smallFont" scope="col" style="border-color:White;border-width:1px;border-style:solid;white-space:nowrap;">Retraction or Other Notices<br>Title/Subject(s)/Journal --- Publisher/Affiliation(s)/Retraction Watch Post URL(s)<br><span class="totalItems">4 Item(s) Found</span></th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Reason(s)</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Author(s)</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Original Paper<br>Date/PubMedID/DOI</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Retraction or Other Notices<br>Date/PubMedID/DOI</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;font-weight:bold;" class="smallFont">Article Type(s)<br>Nature of Notice</th><th scope="col" style="border-color:White;border-width:1px;border-style:solid;" class="smallFont">Countries<br>Paywalled?<br>Notes</th>
+		</tr><tr class="mainrow" style="background-color:LightYellow;border-color:Black;border-width:1px;border-style:Solid;">
+			<td class="hidden smallFont" style="color:Black;">19580</td><td id="grdRetraction_Title_0" title="19580" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$19580&#39;)" style="cursor:default;"><span class="rTitleNotIE">Cooling flexural modes of a mechanical oscillator by magnetically trapped Bose-Einstein-condensate atoms</span><br><span class="rSubject">(PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review A ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Anhui Province Key Laboratory of Condensed Matter Physics at Extreme Conditions, High Magnetic Field Laboratory, Chinese Academy of Sciences, Hefei 230031, Anhui, People's Republic of China</span><span class="rInstitution">
+University of Science and Technology of China, Hefei 230026, People's Republic of China</span><span class="rInstitution">
+Collaborative Innovation Center of Advanced Microstructures, Nanjing University, Nanjing 210093, People's Republic of China</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Error in Analyses</div><div class="rReason" style="border-bottom-style: none;">+Error in Results and/or Conclusions</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Donghong Xu</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Fei Xue</a></td><td style="border-color:Silver;" class="smallFont">12/11/2017<br>00000000<br><span class="rNature">10.1103/PhysRevA.96.063813</span></td><td style="border-color:Silver;" class="smallFont">11/11/2018<br>00000000<br><span class="rNature">10.1103/PhysRevA.98.059902</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>China<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review A_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review A_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="rolf   https://journals.aps.org/pra/abstract/10.1103/PhysRevA.98.059902
+
+Recently, the authors have found a flaw in the basic modeling of the system presented in this paper. In modeling a hybrid system of a mechanical oscillator and BEC atoms, the hyperfine states 
+|
+1
+,
+-
+1
+?
+ and 
+|
+1
+,
+0
+?
+ of 
+87
+Rb
+ are chosen as eigenstates in the Jaynes-Cummings Hamiltonian, which will not cool the flexural modes of the mechanical oscillator.
+
+The proper choice of eigenstates of 
+87
+Rb
+ in the Jaynes-Cummings Hamiltonian should be the hyperfine states 
+|
+1
+,
+-
+1
+?
+ and 
+|
+2
+,
+-
+2
+?
+. When using the hyperfine states 
+|
+1
+,
+-
+1
+?
+ and 
+|
+2
+,
+-
+2
+?
+ of 
+87
+Rb
+ as eigenstates in the Jaynes-Cummings Hamiltonian, the theoretical analyses given in Secs. II and III are still valid.
+
+However, this new choice of eigenstates will greatly affect the methods of cooling the mechanical oscillators. To match the energy of the hyperfine states 
+|
+1
+,
+-
+1
+?
+ and 
+|
+2
+,
+-
+2
+?
+, the frequency of the mechanical oscillators is in the order of 6 GHz, instead of a tunable frequency range from a few MHz to a few hundred MHz in this paper. Also, the coupling strength between the mechanical oscillator and 
+87
+Rb
+ atoms is also reduced. Therefore, Sec. IV should be reconsidered. The cooling efficiency for mechanical oscillators in this study is greatly reduced. Since the cooling efficiency is an indispensable part of this paper, we wish to retract this paper to avoid misleading the readership. We regret the error." class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow" style="background-color:White;">
+			<td class="hidden smallFont" style="color:Black;">16204</td><td id="grdRetraction_Title_1" title="16204" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$16204&#39;)" style="cursor:default;"><span class="rTitleNotIE">Effects of synthetic magnetic flux in a parity-time-symmetric system of three coupled optical resonators</span><br><span class="rSubject">(PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review A ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">School of Physics, Nankai University, Tianjin 300071, China</span><span class="rInstitution">
+College of Physics and Materials Science, Tianjin Normal University, Tianjin 300387, China</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Error in Data</div><div class="rReason" style="border-bottom-style: none;">+Error in Results and/or Conclusions</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Liang Jin</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Feifei Xin</a></td><td style="border-color:Silver;" class="smallFont">10/10/2017<br>00000000<br><span class="rNature">10.1103/PhysRevA.96.043821</span></td><td style="border-color:Silver;" class="smallFont">11/16/2017<br>00000000<br><span class="rNature">10.1103/PhysRevA.96.059905</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>China<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review A_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review A_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="staff   https://journals.aps.org/pra/abstract/10.1103/PhysRevA.96.059905  (again - why didnt peer review catch this?)
+
+The authors recently have found a flaw in the basic modeling of the system presented in this paper. The gain as a result of
+lasing is nonlinear and depends on the clockwise and counterclockwise mode intensities; the clockwise and counterclockwise
+modes experience opposite magnetic fluxes. Therefore, the linear equations (1)–(3) in the paper described only one type of mode
+and cannot characterize the real physics of the system. Since the equations are critical to this paper, we wish to retract this paper
+to avoid misleading the readership. We regret the error." class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow">
+			<td class="hidden smallFont" style="color:Black;">5323</td><td id="grdRetraction_Title_2" title="5323" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$5323&#39;)" style="cursor:default;"><span class="rTitleNotIE">Optimal Quantum Communication Using Multiparticle Partially Entangled States</span><br><span class="rSubject">(PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review A ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">Indian Institute of Technology Rajasthan, Jodhpur, India</span><span class="rInstitution" style="border-bottom: 2px solid rgb(0, 102, 33);">
+Techno India, Salt Lake City, Kolkata 700091, India</span><br></a><a href="http://retractionwatch.com/2013/05/21/paper-on-partially-entangled-states-retracted-for-partially-entangling-authors/" class="urls">http://retractionwatch.com/2013/05/21/paper-on-partially-entangled-states-retracted-for-partially-entangling-authors/</a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason">+Concerns/Issues about Referencing/Attributions</div><div class="rReason">+Euphemisms for Plagiarism</div><div class="rReason" style="border-bottom-style: none;">+Plagiarism of Text</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Atul Kumar</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Satyabrata Adhikari</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Subhashish Banerjee</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Sovik Roy</a></td><td style="border-color:Silver;" class="smallFont">02/07/2013<br><br><span class="rNature">10.1103/PhysRevA.87.059904</span></td><td style="border-color:Silver;" class="smallFont">05/20/2013<br><br><span class="rNature">10.1103/</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>India<br><span class="rPaywalled">No</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review A_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review A_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr><tr class="mainrow" style="background-color:White;">
+			<td class="hidden smallFont" style="color:Black;">5324</td><td id="grdRetraction_Title_3" title="5324" style="border-color:Silver;" class="smallFont"><a onclick="return false;" href="javascript:__doPostBack(&#39;grdRetraction&#39;,&#39;Select$5324&#39;)" style="cursor:default;"><span class="rTitleNotIE">Quantum Critical Phenomena in the XY Spin Chain with the Dzyaloshinski-Moriya Interaction</span><br><span class="rSubject">(PHY) Mathematics; (PHY) Physics; </span><br><span style="white-space:normal" class="rJournal"><span class="rJournal">Physical Review A ---</span><span class="rPublisher">American Physical Society</span></span><br><span class="rInstitution" style="border-top-style: solid; border-top-width: 2px;">State Key Laboratory for Superlattices and Microstructures, Institute of Semiconductors,</span><span class="rInstitution">
+Chinese Academy of Sciences, P.O. Box 912, Beijing 100083, People’s Republic of China</span></a></td><td style="border-color:Silver;" class="smallFont"><div class="rReason" style="border-bottom-style: none;">+Unreliable Results</div></td><td style="border-color:Silver;white-space:nowrap;" class="smallFont"><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Yan-Chao Li</a><br><a href="http://retractiondatabase.org/RetractionSearch.aspx#" class="authorLink">Shu-Shen Li</a></td><td style="border-color:Silver;" class="smallFont">03/30/2009<br><br><span class="rNature">10.1103/PhysRevA.80.019903</span></td><td style="border-color:Silver;" class="smallFont">07/22/2009<br><br><span class="rNature">10.1103/PhysRevA.80.019903</span></td><td class="wrapCell smallFont" style="border-color:Silver;width:12%;">Research Article<br><span class="rNature">Retraction</span></td><td align="center" style="border-color:Silver;white-space:nowrap;" class="smallFont">
+                                    <span>China<br><span class="rPaywalled">Yes</span></span>
+                                    <img id="imgNotes" border="0" src="./Physical Review A_files/Notes.png" alt="Notes" style="display:none" title="" class="Notes">
+                                    <img id="imgNotesAdmin" border="0" src="./Physical Review A_files/NotesAdmin.png" alt="NotesAdmin" style="display:none;margin-top:2px;" title="" class="NotesAdmin">
+                                </td>
+		</tr>
+	</tbody></table>
+</div>
+            </span>
+        </div>
+        <select id="lstCountry" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchCountry&#39;));" class="lstBox" attrcode="SCO"></select>
+        
+        <select id="lstAuthor" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchAuthor&#39;));" class="lstBox" attrcode="AUT"></select>
+        
+        <select id="lstJournal" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchJournal&#39;));" class="lstBox" attrcode="SJO"></select>
+        
+        <select id="lstPublisher" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchPublisher&#39;));" class="lstBox" attrcode="SPU"></select>
+        
+        <select id="lstSubject" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchSubject&#39;));" class="lstBox" attrcode="SSU"></select>
+        
+        <select id="lstSubjectGroup" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchSubject&#39;));" class="lstBox" attrcode="SGR"></select>
+        
+        <select id="lstReason" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchReason&#39;));" class="lstBox" attrcode="SRE"></select>
+        
+        
+        <select id="lstType" size="20" onblur="lstJustHidden=this;$(this).hide();" onclick="lstClick(this,$(&#39;#txtSrchType&#39;));" class="lstBox" attrcode="STY"></select>
+    </div>
+    
+<script>window.location.hash = '?jou%3dPhysical%2bReview%2bA';</script>
+<script type="text/javascript">
+//<![CDATA[
+WebForm_AutoFocus('txtSrchTitle');//]]>
+</script>
+</form>
+    
+
+<script src="./Physical Review A_files/index.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //alert('loaded');
+        //    if (!$.browser.safari)
+        //        initEdit();
+        imageLoaded();
+        initLogin();
+        if (($('#btnSave').is(":visible") && isIE) || $('#btnSave').css('display') !== 'none')
+            $('tr').removeClass('hidden');
+        try {
+            doScroll();
+        }
+        catch (err) {
+        }
+        //imageLoaded();
+        
+    });
+    //$(window).load(function () {
+    //    //alert("window load occurred!");
+    //    imageLoaded();
+    //    //alert($('#btnSearch').css('background-image'));
+    //    //toggleSpinner();
+    //    //$('#divContent')
+    //    //    .show();
+    //});
+</script>
+
+<ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-1" tabindex="0" style="display: none; font-size: 0.9em;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-2" tabindex="0" style="display: none; font-size: 0.9em;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content" id="ui-id-3" tabindex="0" style="display: none; font-size: 0.9em;"></ul><span role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></span></body></html>
