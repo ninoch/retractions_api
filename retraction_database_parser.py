@@ -11,7 +11,7 @@ print ("")
 print ("\t >>> Parsing .html files in {}/ <<<".format(folder_name))
 print ("")
 
-ret_papers = pd.DataFrame(columns=['title', 'authors', 'journal', 'doi', 'pub_med', 'date', 'ret_dio', 'ret_pub_med', 'ret_date', 'reasons'])
+ret_papers = pd.DataFrame(columns=['title', 'authors', 'journal', 'doi', 'pub_med', 'date', 'ret_doi', 'ret_pub_med', 'ret_date', 'reasons'])
 
 class MyHTMLParser(HTMLParser):
     def __init__(self):
@@ -52,7 +52,7 @@ class MyHTMLParser(HTMLParser):
     		'doi': self.ret_info[0][2], 
     		'pub_med': self.ret_info[0][1], 
     		'date': self.ret_info[0][0],
-    		'ret_dio': self.ret_info[1][2], 
+    		'ret_doi': self.ret_info[1][2], 
     		'ret_pub_med': self.ret_info[1][1], 
     		'ret_date': self.ret_info[1][0], 
     		'reasons': ';'.join(self.reasons),
